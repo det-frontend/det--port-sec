@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "poppin", sans-serif;
+  scroll-behavior: smooth;
+}
+.header {
+  font-family: "Archivo Black", sans-serif;
+}
+.bgImg {
+  background-image: url("./assets/nav.jpg");
+}
+.heroBg {
+  background-image: url("./assets/heroBg.png");
+}
+.sectionBg {
+  background-image: url("./assets/section.jpg");
+}
+.circuitBg {
+  background-image: url("./assets/circuitbg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.active {
+  border-bottom: 3px solid #1b3352;
+}
+.slideP{
+    padding: 100px;
+}
+.rightCircuit{
+  background-image: url("./assets/right.png");
+  background-size: 250px 250px;
+  background-position: right top;
+  background-repeat: no-repeat;
+
+}
+
+
+
+/* scroll  */
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--purple);
+  --accent: var(--white);
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--accent);
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
