@@ -32,7 +32,7 @@ const Nav = () => {
       name: "Product",
       link: "/#product",
       offset: -100,
-      active: current > 1100 && current < 2000 ? "active" : "",
+      active: current > 1100 && current < 1800 ? "active" : "",
     },
     {
       to: "about",
@@ -40,14 +40,14 @@ const Nav = () => {
       name: "About",
       link: "/#about",
       offset: -120,
-      active: current > 2000 && current < 2650 ? "active" : "",
+      active: current > 1800 && current < 2200 ? "active" : "",
     },
     {
       to: "contact",
       name: "Contact",
       link: "/#contact",
       offset: -180,
-      active: current > 2650 ? "active" : "",
+      active: current > 2200 ? "active" : "",
     },
   ];
 

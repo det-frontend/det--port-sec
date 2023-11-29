@@ -1,11 +1,11 @@
-import iot from "../assets/iot.jpg";
+import fuelProduct from "../assets/fuelProduct.jpg";
 const product = [
   {
     id: 1,
     title: "Realtime Fuel Station Management System",
     subtitle:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. point of using Lorem the readable content of a page when looking at its layout. The point of using Lorem",
-    img: iot,
+      "We provide state-of-the-art Realtime Fuel Station Management Systems that ensure seamless operations. Our system enables real-time monitoring of inventory, transactions, and pump activity. It features user-friendly interfaces, robust security measures, and automated alerts for maintenance and inventory management.",
+    img: fuelProduct,
   },
 ];
 

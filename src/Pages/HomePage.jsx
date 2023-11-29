@@ -7,6 +7,8 @@ import { Swiper as Custom } from "https://cdn.jsdelivr.net/npm/swiper@11/swiper.
 import { TypeAnimation } from "react-type-animation";
 import { PasswordInput, TextInput, Textarea } from "@mantine/core";
 import { FaLocationDot } from "react-icons/fa6";
+import left from '../assets/left.png'
+import right from '../assets/rightbutton.png'
 
 // Import Swiper styles
 import "swiper/css";
@@ -136,7 +138,7 @@ const HomePage = () => {
         </div>
       </section>
       <section id="service">
-        <div className=" ps-5 pb-10 sectionBg pt-20 bg-cover ">
+        <div className=" ps-5 sectionBg pt-12 bg-cover ">
           <div className=" w-[90%] pt-5 mx-auto">
             <TypeAnimation
               sequence={[
@@ -241,7 +243,7 @@ const HomePage = () => {
         </div>
       </section>
       <section id="product">
-        <div className=" flex-col items-center flex justify-center pt-28">
+        <div className=" flex-col items-center flex justify-center pb-12 pt-12">
           <div className="w-[90%] mt-5 mx-auto">
             <TypeAnimation
               sequence={[
@@ -273,13 +275,18 @@ const HomePage = () => {
               ))}
             </div>
           </div>
-          <div className="overflow-hidden w-full pt-32">
+          {/* <div className="overflow-hidden w-full pt-32">
             <ScrollX />
-          </div>
+          </div> */}
         </div>
       </section>
-      <section id="about" className="pt-10">
-        <div className=" pb-14 sectionBg bg-cover  pt-8">
+      <section id="about" className="pt-10 ">
+        <div className="flex flex-row justify-between pb-7 sectionBg bg-cover ">
+          <img
+            src={left}
+            alt=""
+            className="2xl:h-[300px] h-[200px] mt-auto mb-[-55px]"
+          />
           <div className="mt-10 flex flex-col items-center">
             <motion.div
               viewport={{ once: true }}
@@ -317,13 +324,13 @@ const HomePage = () => {
                   delay: 0.2,
                   duration: 0.8,
                 }}
-                className="2xl:w-[60%] xl:w-[70%] w-[80%] text-2xl font-semibold text-center text-text/80"
+                className="w-[100%] text-2xl font-semibold text-center text-text/80"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only
+                Digital Engineering Tech LTD. was founded in 2019 and one of
+                Myanmar local company that manufactures high-end smart devices
+                for clients at reasonable prices. We mainly provide IoT Smart
+                Home Systems and Home Automation Systems which are depend on
+                weather and requirements of clients.
               </motion.div>
               <motion.div
                 viewport={{ once: true }}
@@ -355,17 +362,22 @@ const HomePage = () => {
               </motion.div>
             </div>
           </div>
+          <img
+            src={right}
+            alt=""
+            className="2xl:h-[300px] h-[200px] mt-auto mb-[-55px]"
+          />
         </div>
       </section>
       <section id="contact">
         <div className="h-[550px]">
-          <div className="mt-14 w-full overflow-hidden">
+          <div className="mt-10 w-full overflow-hidden">
             <div className="text-white font-bold text-[3rem] text-center">
               Contact Us
             </div>
             <div className=" flex justify-center">
               <motion.div
-                viewport={{ once: true ,margin:"200px"}}
+                viewport={{ once: true, margin: "200px" }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 initial={{ opacity: 0, scale: 0 }}
                 transition={{
