@@ -52,7 +52,7 @@ const Nav = () => {
   ];
 
   return (
-    <>
+    <div>
       <motion.div
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 1 }}
@@ -62,7 +62,7 @@ const Nav = () => {
           delay: 0.2,
           duration: 0.8,
         }}
-        className="bgImg  h-[85px] shadow-2xl shadow-primary/10 flex justify-center"
+        className="bgImg h-[85px] shadow-2xl shadow-primary/10 flex justify-center"
       >
         {/* <div
         className={`bgImg h-[100px] delay-100 shadow-2xl shadow-primary/10 flex justify-center -translate-y-28`}
@@ -76,7 +76,7 @@ const Nav = () => {
           <img src={logo} className="h-16 ms-[-50px]" alt="err" />
           <div className="flex items-center gap-3">
             {navList.map((data) => (
-              console.log(data.active),
+              // console.log(data.active),
               <a href={data.link}>
                 <List key={data.id} active={data.active} className="active" {...data} />
               </a>
@@ -84,7 +84,7 @@ const Nav = () => {
           </div>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 };
 

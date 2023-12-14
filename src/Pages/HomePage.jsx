@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import Card from "../components/Card/Card";
 import service from "../content/service";
@@ -7,8 +7,9 @@ import { Swiper as Custom } from "https://cdn.jsdelivr.net/npm/swiper@11/swiper.
 import { TypeAnimation } from "react-type-animation";
 import { PasswordInput, TextInput, Textarea } from "@mantine/core";
 import { FaLocationDot } from "react-icons/fa6";
-import left from '../assets/left.png'
-import right from '../assets/rightbutton.png'
+import left from "../assets/left.png";
+import right from "../assets/rightbutton.png";
+import { useNavigate } from "react-router";
 
 // Import Swiper styles
 import "swiper/css";
@@ -23,19 +24,17 @@ import { FaPhone } from "react-icons/fa6";
 import ScrollX from "../components/ScrollX";
 
 const HomePage = () => {
-  const ref = useRef(null);
+  const [render, setRender] = useState(false);
+  // const navigate = useNavigate();
   const { scrollY } = useScroll();
-  console.log('====================================');
-  console.log(scrollY.current);
-  console.log('====================================');
   const [typingStatus, setTypingStatus] = useState("Initializing");
   return (
     <div className="circuitBg bg-cover">
       <section className="" id="home">
         <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[560px] xl:h-[730px] bg-cover bg-top">
-          <div className="w-[83%] xl:mt-[50px] 2xl:mt-[150px] flex justify-center">
-            <div className="flex flex-col items-start">
-              <motion.div
+          <div className="w-[90%] xl:mt-[50px] items-center 2xl:mt-[150px] flex justify-center">
+            <div className="flex ms-8 w-[100%] h-[300px] flex-col items-start">
+              {/* <motion.div
                 viewport={{ once: true }}
                 whileInView={{ x: 1, opacity: 1 }}
                 initial={{ x: "-100%", opacity: 0 }}
@@ -62,7 +61,7 @@ const HomePage = () => {
                 className="flex justify-center text-[2.3rem] text-white items-center"
               >
                 Control Your Home With DET Products
-              </motion.div>
+              </motion.div> */}
               <motion.div
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, x: 1 }}
@@ -73,13 +72,118 @@ const HomePage = () => {
                   delay: 0.8,
                   duration: 2,
                 }}
-                className="text-white text-lg mt-3 w-[80%]"
+                className="text-white flex flex-col"
               >
-                Digital Engineering Tech LTD. was founded in 2019 and one of
-                Myanmar local company that manufactures high-end smart devices
-                for clients at reasonable prices. We mainly provide IoT Smart
-                Home Systems and Home Automation Systems which are depend on
-                weather and requirements of clients.
+                <TypeAnimation
+                  // cursor={false}
+                  sequence={[
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "Everything in one App,",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    6800,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "For Simple, Secure And Smart",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    5000,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "Use Smart Devices",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    5500,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                  ]}
+                  speed={65}
+                  style={{ fontSize: "2.9em" }}
+                  className="font-bold pt-10 text-white"
+                  repeat={Infinity}
+                />
+                <TypeAnimation
+                  sequence={[
+                    1800,
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "Control Your Home With DET Products...",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    3500,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                    1900,
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "Use DET Products",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    4000,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                    1500,
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "To Become Smart Life",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    3800,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                  ]}
+                  speed={65}
+                  style={{ fontSize: "1.7em" }}
+                  className="font-bold pt-5 text-white"
+                  repeat={Infinity}
+                />
               </motion.div>
               <motion.div
                 viewport={{ once: true }}
@@ -91,7 +195,7 @@ const HomePage = () => {
                   delay: 1,
                   duration: 2,
                 }}
-                className=""
+                className="mt-5 "
               >
                 <div
                   whileHover={{
@@ -114,7 +218,7 @@ const HomePage = () => {
                 delay: 1.2,
                 duration: 2,
               }}
-              className=""
+              className=" ms-[-200px] w-[700px]"
             >
               <div className="xl:flex hidden">
                 <lottie-player
@@ -131,6 +235,7 @@ const HomePage = () => {
                   mode="normal"
                   loop
                   autoplay
+                  className=""
                 ></lottie-player>
               </div>
             </motion.div>
@@ -281,7 +386,7 @@ const HomePage = () => {
         </div>
       </section>
       <section id="about" className="pt-10 ">
-        <div className="flex flex-row justify-between pb-7 sectionBg bg-cover ">
+        <div className="flex flex-row justify-between pb-7 sectionBg bg-cover overflow-hidden">
           <img
             src={left}
             alt=""
@@ -302,7 +407,7 @@ const HomePage = () => {
               About Us
             </motion.div>
             <div className="flex flex-col items-center gap-1">
-              <motion.div
+              {/* <motion.div
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 initial={{ opacity: 0, scale: 0 }}
@@ -314,7 +419,7 @@ const HomePage = () => {
                 className="text-text font-bold xl:font-extrabold text-[3rem] text-center"
               >
                 For Simple, Secure And Smart
-              </motion.div>
+              </motion.div> */}
               <motion.div
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -326,13 +431,14 @@ const HomePage = () => {
                 }}
                 className="w-[100%] text-2xl font-semibold text-center text-text/80"
               >
-                Digital Engineering Tech LTD. was founded in 2019 and one of
-                Myanmar local company that manufactures high-end smart devices
-                for clients at reasonable prices. We mainly provide IoT Smart
-                Home Systems and Home Automation Systems which are depend on
-                weather and requirements of clients.
+                Our company, initially named Digital Engineering Group, was
+                established in December 2019 and later changed and registered to
+                Digital Engineering Tech Ltd in November 2021. We offer a
+                variety of services with a primary focus on IOT Engineering and
+                other IT services. Throughout our journey, our company has
+                achieved several significant milestones
               </motion.div>
-              <motion.div
+              {/* <motion.div
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 initial={{ opacity: 0, scale: 0 }}
@@ -344,7 +450,7 @@ const HomePage = () => {
                 className="text-text font-semibold text-[2rem] text-center"
               >
                 Use DET Products
-              </motion.div>
+              </motion.div> */}
               <motion.div
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, y: 1 }}
@@ -456,13 +562,15 @@ const HomePage = () => {
                     <div className="flex mt-3">
                       <MdEmail className="me-3 my-auto w-12 text-white text-[30px]" />
                       <div className="text-xl font-semibold text-white">
-                        admin@det-mm.com
+                        <a href="mailto:digitalengineeringtech.mm@gmail.com">
+                          digitalengineeringtech.mm@gmail.com
+                        </a>
                       </div>
                     </div>
                     <div className="flex mt-3">
                       <FaPhone className="me-3 my-auto w-12 text-white text-[25px]" />
                       <div className="text-xl font-semibold text-white">
-                        (959)988-34-0001
+                        <a href="tel:+959988340001">+959-988-34-0001</a>
                       </div>
                     </div>
                   </div>
