@@ -1,14 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+  }
 
 * {
   font-family: "poppin", sans-serif;
   scroll-behavior: smooth;
 }
+/* .havig {
+  font-family: "Hedvig Letters Sans", sans-serif;
+} */
 .header {
   font-family: "Archivo Black", sans-serif;
 }
@@ -29,18 +44,15 @@
 .active {
   border-bottom: 3px solid #1b3352;
 }
-.slideP{
-    padding: 100px;
+.slideP {
+  padding: 100px;
 }
-.rightCircuit{
+.rightCircuit {
   background-image: url("./assets/right.png");
   background-size: 250px 250px;
   background-position: right top;
   background-repeat: no-repeat;
-
 }
-
-
 
 /* scroll  */
 body {
@@ -65,7 +77,7 @@ body {
   background-color: var(--background);
   color: var(--accent);
 }
-section{
+section {
   scroll-margin-top: 80px;
 }
 
@@ -88,7 +100,6 @@ section{
   display: flex;
   flex-wrap: nowrap;
 }
-
 
 .parallax span {
   display: block;

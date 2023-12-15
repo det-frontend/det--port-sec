@@ -29,11 +29,11 @@ const HomePage = () => {
   const { scrollY } = useScroll();
   const [typingStatus, setTypingStatus] = useState("Initializing");
   return (
-    <div className="circuitBg bg-cover">
+    <div className="circuitBg bg-cover ">
       <section className="" id="home">
         <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[560px] xl:h-[730px] bg-cover bg-top">
-          <div className="w-[90%] xl:mt-[50px] items-center 2xl:mt-[150px] flex justify-center">
-            <div className="flex ms-8 w-[100%] h-[300px] flex-col items-start">
+          <div className="w-[90%] ms-40 xl:mt-[50px] items-center 2xl:mt-[150px] flex justify-between">
+            <div className="flex  ms-8 w-[60%] h-[300px] flex-col items-start">
               {/* <motion.div
                 viewport={{ once: true }}
                 whileInView={{ x: 1, opacity: 1 }}
@@ -69,10 +69,10 @@ const HomePage = () => {
                 transition={{
                   type: "spring",
                   // stiffness: 50,
-                  delay: 0.8,
+                  // delay: 0.8,
                   duration: 2,
                 }}
-                className="text-white flex flex-col"
+                className="text-white  flex flex-col"
               >
                 <TypeAnimation
                   // cursor={false}
@@ -124,13 +124,13 @@ const HomePage = () => {
                     },
                   ]}
                   speed={65}
-                  style={{ fontSize: "2.9em" }}
+                  style={{ fontSize: "3em" }}
                   className="font-bold pt-10 text-white"
                   repeat={Infinity}
                 />
                 <TypeAnimation
                   sequence={[
-                    1800,
+                    1500,
                     () => {
                       setTypingStatus("Typing...");
                     },
@@ -154,7 +154,7 @@ const HomePage = () => {
                     () => {
                       setTypingStatus("Done Typing");
                     },
-                    4000,
+                    3900,
                     () => {
                       setTypingStatus("Deleting...");
                     },
@@ -192,7 +192,7 @@ const HomePage = () => {
                 transition={{
                   type: "spring",
                   // stiffness: 50,
-                  delay: 1,
+                  // delay: 1,
                   duration: 2,
                 }}
                 className="mt-5 "
@@ -218,7 +218,7 @@ const HomePage = () => {
                 delay: 1.2,
                 duration: 2,
               }}
-              className=" ms-[-200px] w-[700px]"
+              className=" ms-[-200px] w-[50%] "
             >
               <div className="xl:flex hidden">
                 <lottie-player
@@ -402,7 +402,7 @@ const HomePage = () => {
                 // delay: e.delay,
                 duration: 0.8,
               }}
-              className="text-text font-bold text-[2.5rem] mb-3 text-center"
+              className="text-text font-semibold text-[2.5rem] mb-3 text-center"
             >
               About Us
             </motion.div>
@@ -429,7 +429,7 @@ const HomePage = () => {
                   delay: 0.2,
                   duration: 0.8,
                 }}
-                className="w-[100%] text-2xl font-semibold text-center text-text/80"
+                className="w-[100%] havig text-2xl  text-center text-text/80"
               >
                 Our company, initially named Digital Engineering Group, was
                 established in December 2019 and later changed and registered to
@@ -462,7 +462,7 @@ const HomePage = () => {
                 }}
                 className=""
               >
-                <button className="mb-6 me-8 bg-button text-xl font-semibold hover:bg-transparent duration-100 mt-3 hover:text-button border-[3px] border-button px-4 py-2 flex rounded-md text-white">
+                <button className="mb-6 bg-button text-xl font-semibold hover:bg-transparent duration-100 mt-3 hover:text-button border-[3px] border-button px-4 py-2 flex rounded-md text-white">
                   Learn more
                 </button>
               </motion.div>

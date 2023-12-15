@@ -8,6 +8,7 @@ import "../../index.css";
 
 const Nav = () => {
   const { scrollY } = useScroll();
+  const [param, setParam] = useState();
   const current = scrollY.current;
   const navList = [
     {
@@ -64,23 +65,35 @@ const Nav = () => {
         }}
         className="bgImg h-[85px] shadow-2xl shadow-primary/10 flex justify-center"
       >
-        {/* <div
-        className={`bgImg h-[100px] delay-100 shadow-2xl shadow-primary/10 flex justify-center -translate-y-28`}
-      > */}
-        {/* <div
-        className={`bgImg h-[100px] delay-150 shadow-2xl shadow-primary/10 flex justify-center ${
-          !show && "-translate-y-28"
-        }`}
-      > */}
         <div className="w-[80%] items-center flex justify-between px-3">
           <img src={logo} className="h-16 ms-[-50px]" alt="err" />
           <div className="flex items-center gap-3">
-            {navList.map((data) => (
-              // console.log(data.active),
-              <a href={data.link}>
-                <List key={data.id} active={data.active} className="active" {...data} />
-              </a>
-            ))}
+            {!(param == "/blog") &&
+              navList.map((data) => (
+                // console.log(data.active),
+                <a href={data.link}>
+                  <List
+                    key={data.id}
+                    active={data.active}
+                    className="active"
+                    {...data}
+                  />
+                </a>
+              ))}
+
+            {!(param == "/blog") ? (
+              <Link onClick={() => setParam("/blog")} to={"/blog"}>
+                <button className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
+                  Blog
+                </button>
+              </Link>
+            ) : (
+              <Link onClick={() => setParam()} to={"/"}>
+                <button className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
+                  Back to Home
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </motion.div>
