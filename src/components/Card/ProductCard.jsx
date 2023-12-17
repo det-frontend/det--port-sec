@@ -3,7 +3,7 @@ import iot from "../../assets/iot.jpg";
 import { motion } from "framer-motion";
 import product from "../../content/product";
 const ProductCard = ({ id, title, subtitle, img }) => {
-//   console.log(product);
+  //   console.log(product);
   return (
     <motion.div
       viewport={{ once: true }}
@@ -42,12 +42,14 @@ const ProductCard = ({ id, title, subtitle, img }) => {
                 {title}
               </div>
               <div className="text-lg w-[420px] xl:w-[450px] 2xl:w-[500px] mt-2 text-text/80">
-                {subtitle.slice(0,300)} <span className="text-text/30 ms-2">see more . . .</span>
+                {subtitle.slice(0, 300)}{" "}
+                <span className="text-text/30 ms-2">see more . . .</span>
               </div>
             </div>
-            <button className=" mb-4 mt-auto me-5 bg-button xl:text-lg hover:bg-transparent duration-100 hover:text-button border-2 border-button px-4 py-2 ms-auto flex rounded-md text-white">
+            {/* <button className=" mb-4 mt-auto me-5 bg-button xl:text-lg hover:bg-transparent duration-100 hover:text-button border-2 border-button px-4 py-2 ms-auto flex rounded-md text-white">
               Learn more
-            </button>
+            </button> */}
+            <button className="button mt-5 w-60 ms-auto me-6  ">Learn more</button>
           </div>
         </div>
       </motion.div>

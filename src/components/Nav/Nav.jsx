@@ -53,18 +53,17 @@ const Nav = () => {
   ];
 
   return (
-    <div>
-      <motion.div
-        viewport={{ once: true }}
-        whileInView={{ opacity: 1, y: 1 }}
-        initial={{ opacity: 0, y: "-100%" }}
-        transition={{
-          // stiffness: 400,
-          delay: 0.2,
-          duration: 0.8,
-        }}
-        className="bgImg h-[85px] shadow-2xl shadow-primary/10 flex justify-center"
-      >
+    <motion.div
+      viewport={{ once: true }}
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: "-100%" }}
+      transition={{
+        // stiffness: 400,
+        delay: 0.2,
+        duration: 0.8,
+      }}
+    >
+      <div className="bgImg h-[85px] shadow-2xl shadow-primary/10 flex justify-center">
         <div className="w-[80%] items-center flex justify-between px-3">
           <img src={logo} className="h-16 ms-[-50px]" alt="err" />
           <div className="flex items-center gap-3">
@@ -83,21 +82,23 @@ const Nav = () => {
 
             {!(param == "/blog") ? (
               <Link onClick={() => setParam("/blog")} to={"/blog"}>
-                <button className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
+                {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
                   Blog
-                </button>
+                </div> */}
+                <button className="button">Blog</button>
               </Link>
             ) : (
               <Link onClick={() => setParam()} to={"/"}>
-                <button className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
+                {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
                   Back to Home
-                </button>
+                </div> */}
+                <button className="button">Back to Home</button>
               </Link>
             )}
           </div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };
 

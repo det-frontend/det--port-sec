@@ -22,6 +22,7 @@ import product from "../content/product";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import ScrollX from "../components/ScrollX";
+import { Link, NavLink } from "react-router-dom";
 
 const HomePage = () => {
   const [render, setRender] = useState(false);
@@ -32,7 +33,7 @@ const HomePage = () => {
     <div className="circuitBg bg-cover ">
       <section className="" id="home">
         <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[560px] xl:h-[730px] bg-cover bg-top">
-          <div className="w-[90%] ms-40 xl:mt-[50px] items-center 2xl:mt-[150px] flex justify-between">
+          <div className="w-[90%] ms-40 xl:mt-[30px] items-center 2xl:mt-[70px] flex justify-between">
             <div className="flex  ms-8 w-[60%] h-[300px] flex-col items-start">
               {/* <motion.div
                 viewport={{ once: true }}
@@ -197,14 +198,19 @@ const HomePage = () => {
                 }}
                 className="mt-5 "
               >
-                <div
+                {/* <div
                   whileHover={{
                     scale: 1.1,
                   }}
                   className=" border-2 hover:bg-white hover:text-primary duration-150 border-white text-white rounded-md mt-4 px-4 text-2xl py-2"
                 >
                   About us
-                </div>
+                </div> */}
+                <a href="/#about">
+                  <button className="button-wh mt-5 border-red-300">
+                    About us
+                  </button>
+                </a>
               </motion.div>
             </div>
             {/* lottie */}
@@ -243,7 +249,7 @@ const HomePage = () => {
         </div>
       </section>
       <section id="service">
-        <div className=" ps-5 sectionBg pt-12 bg-cover ">
+        <div className=" ps-5  sectionBg pt-12 bg-cover ">
           <div className=" w-[90%] pt-5 mx-auto">
             <TypeAnimation
               sequence={[
@@ -269,7 +275,7 @@ const HomePage = () => {
               className="font-bold pt-10   ms-11 text-text"
               repeat={Infinity}
             />
-            <div className="mt-8 xl:flex hidden ps-3 pb-12">
+            <div className="mt-2 xl:flex hidden ps-3 pb-12 items-center">
               <Swiper
                 slidesPerView={3}
                 // spaceBetween={10}
@@ -283,10 +289,10 @@ const HomePage = () => {
                 // mousewheel={true}
                 keyboard={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                className="mySwiper"
+                className="mySwiper h-[500px]"
               >
                 {service.map((e) => (
-                  <SwiperSlide className="pt-4 ps-5">
+                  <SwiperSlide className="pt-16 ps-5">
                     {/* <div className="" ref={ref}> */}
                     <motion.div
                       viewport={{ once: true, margin: "250px" }}
@@ -307,6 +313,7 @@ const HomePage = () => {
                 ))}
               </Swiper>
             </div>
+
             <div className="mt-8 xl:hidden flex ps-3 pb-12">
               <Swiper
                 slidesPerView={2}
@@ -321,10 +328,10 @@ const HomePage = () => {
                 // mousewheel={true}
                 keyboard={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                className="mySwiper"
+                className="mySwiper h-[500px]"
               >
                 {service.map((e) => (
-                  <SwiperSlide className="pt-4 ps-5">
+                  <SwiperSlide className="pt-16 ps-5">
                     <motion.div
                       viewport={{ once: true }}
                       whileInView={{ opacity: 1, y: 1 }}
@@ -462,9 +469,7 @@ const HomePage = () => {
                 }}
                 className=""
               >
-                <button className="mb-6 bg-button text-xl font-semibold hover:bg-transparent duration-100 mt-3 hover:text-button border-[3px] border-button px-4 py-2 flex rounded-md text-white">
-                  Learn more
-                </button>
+                <button className="button mt-5">Learn more</button>
               </motion.div>
             </div>
           </div>
@@ -490,7 +495,7 @@ const HomePage = () => {
                   // stiffness: 400,
                   duration: 0.8,
                 }}
-                className="w-[90%] lg:w-[90%] 2xl:w-[80%] mt-5 flex justify-around items-center backdrop-blur-sm bg-text/40 border-2 rounded-xl border-button  h-[400px]"
+                className="w-[90%] lg:w-[90%] 2xl:w-[80%] mt-5 flex justify-around items-center backdrop-blur-sm bg-text/40 border-2 rounded-xl border-div  h-[400px]"
               >
                 <motion.div
                   viewport={{ once: true }}
@@ -502,7 +507,7 @@ const HomePage = () => {
                     delay: 0.7,
                     duration: 2,
                   }}
-                  className="bg-text/20 backdrop-blur-md shadow-lg border-button border-2  shadow-text/20 w-[45%] flex flex-col rounded-lg gap-3 p-8 "
+                  className="bg-text/20 backdrop-blur-md shadow-lg border-div border-2  shadow-text/20 w-[45%] flex flex-col rounded-lg gap-3 p-8 "
                 >
                   <div className="flex justify-between">
                     <TextInput
@@ -529,9 +534,9 @@ const HomePage = () => {
                     placeholder="Text .... "
                     minRows={5}
                   />
-                  <button className=" me-8 justify-center bg-button text-xl font-semibold hover:bg-transparent duration-100 hover:border-white hover:text-white border-[3px] w-full border-button px-4 py-2 flex rounded-md text-white">
+                  <div className=" me-8 justify-center bg-div text-xl font-semibold hover:bg-transparent duration-100 hover:border-white hover:text-white border-[3px] w-full border-div px-4 py-2 flex rounded-md text-white">
                     Submit
-                  </button>
+                  </div>
                 </motion.div>
                 <motion.div
                   viewport={{ once: true }}
@@ -543,7 +548,7 @@ const HomePage = () => {
                     delay: 1,
                     duration: 3,
                   }}
-                  className="bg-text/20 border-2 border-button p-7 backdrop-blur-md shadow-lg shadow-text/20 rounded-lg w-[45%]"
+                  className="bg-text/20 border-2 border-div p-7 backdrop-blur-md shadow-lg shadow-text/20 rounded-lg w-[45%]"
                 >
                   <div className="text-2xl text-white font-semibold">
                     Information
