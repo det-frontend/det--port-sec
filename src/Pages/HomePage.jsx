@@ -128,7 +128,7 @@ const HomePage = () => {
                   speed={65}
                   cursor={false}
                   // style={{ fontSize: "3em" }}
-                  className="font-bold pt-10 md:text-[3em] text-2xl text-white"
+                  className="font-bold pt-10 h-20 md:text-[3em] text-2xl text-white"
                   repeat={Infinity}
                 />
                 <TypeAnimation
@@ -185,7 +185,7 @@ const HomePage = () => {
                   speed={65}
                   cursor={false}
                   style={{ fontSize: "1.7em" }}
-                  className="font-bold pt-2 md:pt-5 text-white"
+                  className="font-bold pt-2 h-20 md:pt-5 text-white"
                   repeat={Infinity}
                 />
               </motion.div>
