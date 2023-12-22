@@ -128,7 +128,8 @@ const Nav = () => {
                 </motion.a>
               ))}
               <li>
-                <Link onClick={() => setParam("/blog")} to={"/blog"}>
+                {/* <Link onClick={() => setParam("/blog")} to={"/blog"}> */}
+                <Link>
                   {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
                   Blog
                 </div> */}

@@ -248,7 +248,7 @@ const HomePage = () => {
         </div>
       </section>
       <section id="service">
-        <div className=" ps-5  sectionBg pt-8 md:pt-12 bg-cover ">
+        <div className="  sectionBg pt-8 md:pt-12 bg-cover ">
           <div className="w-[95%] xl:w-[90%] md:pt-5 mx-auto">
             <TypeAnimation
               sequence={[
@@ -271,10 +271,10 @@ const HomePage = () => {
               ]}
               speed={65}
               // style={{ fontSize: "2.3em" }}
-              className="font-bold md:pt-10 text-[1.8rem] md:text-[2.3rem]  md:ms-11 text-text"
+              className="font-bold md:pt-10 text-[1.5rem] md:text-[2.3rem]  md:ms-11 text-text"
               repeat={Infinity}
             />
-            <div className="md:mt-2 flex  ps-3 pb-8 md:pb-12 items-center">
+            <div className="md:mt-2 flex pb-8 md:pb-12 items-center">
               <Swiper
                 slidesPerView={1}
                 // spaceBetween={10}
@@ -358,7 +358,7 @@ const HomePage = () => {
                   },
                 ]}
                 speed={65}
-                className="font-bold md:pt-10 md:text-[2.3rem] text-[1.8rem] ms-3 flex mx-auto  md:ms-11 text-white"
+                className="font-bold md:pt-10 md:text-[2.3rem] text-[1.5rem] ms-3 flex mx-auto  md:ms-11 text-white"
                 repeat={Infinity}
               />
             </div>
@@ -558,7 +558,14 @@ const HomePage = () => {
                         <td className="w-10 text-start">
                           <MdEmail className="my-auto w-full mr-auto text-white text-[30px]" />
                         </td>
-                        <td className="text-lg md:text-xl  text-white">
+                        <td className="text-lg lg:hidden md:text-xl  text-white">
+                          {" "}
+                          <a href="mailto:digitalengineeringtech.mm@gmail.com">
+                            digitalengineeringtech
+                            .mm@gmail.com
+                          </a>
+                        </td>
+                        <td className="text-lg md:text-xl hidden lg:flex text-white">
                           {" "}
                           <a href="mailto:digitalengineeringtech.mm@gmail.com">
                             digitalengineeringtech.mm@gmail.com
