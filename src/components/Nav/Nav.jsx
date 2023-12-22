@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { useScroll } from "framer-motion";
 import "../../index.css";
+import { HiMenu } from "react-icons/hi";
+import { MdClose } from "react-icons/md";
 
 const Nav = () => {
   const { scrollY } = useScroll();
@@ -51,6 +53,7 @@ const Nav = () => {
       active: current > 2200 ? "active" : "",
     },
   ];
+  const [chg, setChg] = useState(false);
 
   return (
     <motion.div
@@ -66,7 +69,7 @@ const Nav = () => {
       <div className="bgImg h-[85px] shadow-2xl shadow-primary/10 flex justify-center">
         <div className="w-[80%] items-center flex justify-between px-3">
           <img src={logo} className="h-16 ms-[-50px]" alt="err" />
-          <div className="flex items-center gap-3">
+          <div className="lg:flex items-center gap-3 hidden">
             {!(param == "/blog") &&
               navList.map((data) => (
                 // console.log(data.active),
@@ -96,6 +99,44 @@ const Nav = () => {
               </Link>
             )}
           </div>
+          {/* menu  */}
+          <div onClick={() => setChg(!chg)} className="lg:hidden ms-auto">
+            {chg ? (
+              <MdClose className="text-4xl duration-100 text-primary" />
+            ) : (
+              <HiMenu className="text-4xl duration-100 text-primary" />
+            )}
+          </div>
+          {/* {chg && !show ? ( */}
+          <div
+            className={`w-[90%] mx-auto lg:hidden ${
+              chg ? "opacity-100 translate-y-[350px]" : "opacity-0"
+            } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-[#E4F8FF] backdrop-blur-md fixed`}
+          >
+            <ul className="list-none lg:hidden grid grid-cols-2 gap-2 text-button justify-end text-center items-center flex-col">
+              {navList.map((e) => (
+                <motion.a
+                  href={e.link}
+                  key={e.id}
+                  // whileHover={{ scale: 1.2 }}
+                  // key={e.id}
+                  className="hover:text-secondary text-2xl justify-center duration-75 items-center font-semibold flex p-6 font-poppins"
+                >
+                  {/* <div className="flex me-2 text-2xl">{e.icon}</div> */}
+                  {e.name}
+                </motion.a>
+              ))}
+              <li>
+                <Link onClick={() => setParam("/blog")} to={"/blog"}>
+                  {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
+                  Blog
+                </div> */}
+                  <button className="button">Blog</button>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          {/* menu end  */}
         </div>
       </div>
     </motion.div>

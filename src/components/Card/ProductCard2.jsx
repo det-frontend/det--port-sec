@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Card = ({ title, subtitle, id, img, delay }) => {
+const ProductCard2 = ({ title, subtitle, id, img, delay }) => {
   return (
     <motion.div
       whileHover={{
@@ -13,7 +13,7 @@ const Card = ({ title, subtitle, id, img, delay }) => {
       }}
       className="relative shadow-primary/20 flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
     >
-      <div className="relative mx-4 -mt-6 h-48 overflow-hidden rounded-xl bg-clip-border text-white shadow-lg bg-gradient-to-r from-blue-500 to-blue-600">
+      <div className="relative mx-4 -mt-6 h-48 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
         <img src={img} className="object-center object-cover" alt="" />
       </div>
       <div className="p-6">
@@ -39,4 +39,4 @@ const Card = ({ title, subtitle, id, img, delay }) => {
   );
 };
 
-export default Card;
+export default ProductCard2;

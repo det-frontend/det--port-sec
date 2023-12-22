@@ -23,6 +23,7 @@ import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import ScrollX from "../components/ScrollX";
 import { Link, NavLink } from "react-router-dom";
+import ProductCard2 from "../components/Card/ProductCard2";
 
 const HomePage = () => {
   const [render, setRender] = useState(false);
@@ -32,9 +33,9 @@ const HomePage = () => {
   return (
     <div className="circuitBg bg-cover ">
       <section className="" id="home">
-        <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[560px] xl:h-[730px] bg-cover bg-top">
-          <div className="w-[90%] ms-40 xl:mt-[30px] items-center 2xl:mt-[70px] flex justify-between">
-            <div className="flex  ms-8 w-[60%] h-[300px] flex-col items-start">
+        <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[730px] bg-cover bg-top">
+          <div className="w-[90%] lg:ms-40 xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">
+            <div className="flex mt-[100px] pt-6 md:mt-0 lg:ms-8 w-full lg:w-[60%] h-[300px] flex-col items-start">
               {/* <motion.div
                 viewport={{ once: true }}
                 whileInView={{ x: 1, opacity: 1 }}
@@ -125,8 +126,8 @@ const HomePage = () => {
                     },
                   ]}
                   speed={65}
-                  style={{ fontSize: "3em" }}
-                  className="font-bold pt-10 text-white"
+                  // style={{ fontSize: "3em" }}
+                  className="font-bold pt-10 md:text-[3em] text-2xl text-white"
                   repeat={Infinity}
                 />
                 <TypeAnimation
@@ -182,7 +183,7 @@ const HomePage = () => {
                   ]}
                   speed={65}
                   style={{ fontSize: "1.7em" }}
-                  className="font-bold pt-5 text-white"
+                  className="font-bold pt-2 md:pt-5 text-white"
                   repeat={Infinity}
                 />
               </motion.div>
@@ -207,9 +208,7 @@ const HomePage = () => {
                   About us
                 </div> */}
                 <a href="/#about">
-                  <button className="button-wh mt-5 border-red-300">
-                    About us
-                  </button>
+                  <button className="button-wh border-red-300">About us</button>
                 </a>
               </motion.div>
             </div>
@@ -221,7 +220,7 @@ const HomePage = () => {
               transition={{
                 type: "spring",
                 // stiffness: 30,
-                delay: 1.2,
+                // delay: 1.2,
                 duration: 2,
               }}
               className=" ms-[-200px] w-[50%] "
@@ -249,8 +248,8 @@ const HomePage = () => {
         </div>
       </section>
       <section id="service">
-        <div className=" ps-5  sectionBg pt-12 bg-cover ">
-          <div className=" w-[90%] pt-5 mx-auto">
+        <div className=" ps-5  sectionBg pt-8 md:pt-12 bg-cover ">
+          <div className="w-[95%] xl:w-[90%] md:pt-5 mx-auto">
             <TypeAnimation
               sequence={[
                 1000,
@@ -271,16 +270,34 @@ const HomePage = () => {
                 },
               ]}
               speed={65}
-              style={{ fontSize: "2.3em" }}
-              className="font-bold pt-10   ms-11 text-text"
+              // style={{ fontSize: "2.3em" }}
+              className="font-bold md:pt-10 text-[1.8rem] md:text-[2.3rem]  md:ms-11 text-text"
               repeat={Infinity}
             />
-            <div className="mt-2 xl:flex hidden ps-3 pb-12 items-center">
+            <div className="md:mt-2 flex  ps-3 pb-8 md:pb-12 items-center">
               <Swiper
-                slidesPerView={3}
+                slidesPerView={1}
                 // spaceBetween={10}
                 pagination={{
                   clickable: true,
+                }}
+                breakpoints={{
+                  "@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  "@0.75": {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  "@1.00": {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  "@1.50": {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
                 }}
                 // modules={[Pagination]}
                 // cssMode={true}
@@ -292,7 +309,7 @@ const HomePage = () => {
                 className="mySwiper h-[500px]"
               >
                 {service.map((e) => (
-                  <SwiperSlide className="pt-16 ps-5">
+                  <SwiperSlide className="pt-16">
                     {/* <div className="" ref={ref}> */}
                     <motion.div
                       viewport={{ once: true, margin: "250px" }}
@@ -304,48 +321,11 @@ const HomePage = () => {
                         delay: e.delay,
                         duration: 2,
                       }}
-                      className=""
+                      className="flex justify-center"
                     >
                       <Card id={e.id} {...e} />
                     </motion.div>
                     {/* </div> */}
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-
-            <div className="mt-8 xl:hidden flex ps-3 pb-12">
-              <Swiper
-                slidesPerView={2}
-                // spaceBetween={10}
-                pagination={{
-                  clickable: true,
-                }}
-                // modules={[Pagination]}
-                // cssMode={true}
-                navigation={true}
-                // pagination={true}
-                // mousewheel={true}
-                keyboard={true}
-                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                className="mySwiper h-[500px]"
-              >
-                {service.map((e) => (
-                  <SwiperSlide className="pt-16 ps-5">
-                    <motion.div
-                      viewport={{ once: true }}
-                      whileInView={{ opacity: 1, y: 1 }}
-                      initial={{ opacity: 0, y: "100%" }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 40,
-                        delay: e.delay,
-                        duration: 2,
-                      }}
-                      className=""
-                    >
-                      <Card id={e.id} {...e} />
-                    </motion.div>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -355,35 +335,42 @@ const HomePage = () => {
         </div>
       </section>
       <section id="product">
-        <div className=" flex-col items-center flex justify-center pb-12 pt-12">
+        <div className=" flex-col items-center flex justify-center  md:pb-12 pt-5 md:pt-12">
           <div className="w-[90%] mt-5 mx-auto">
-            <TypeAnimation
-              sequence={[
-                1000,
-                () => {
-                  setTypingStatus("Typing...");
-                },
-                "Products that we provide",
-                () => {
-                  setTypingStatus("Done Typing");
-                },
-                5000,
-                () => {
-                  setTypingStatus("Deleting...");
-                },
-                "",
-                () => {
-                  setTypingStatus("Done Deleting");
-                },
-              ]}
-              speed={65}
-              style={{ fontSize: "2.3em" }}
-              className="font-bold pt-10  ms-11 text-white"
-              repeat={Infinity}
-            />
-            <div className="w-full flex flex-col items-center mt-10">
+            <div className=" flex justify-center text-center">
+              <TypeAnimation
+                sequence={[
+                  1000,
+                  () => {
+                    setTypingStatus("Typing...");
+                  },
+                  "Products that we provide",
+                  () => {
+                    setTypingStatus("Done Typing");
+                  },
+                  5000,
+                  () => {
+                    setTypingStatus("Deleting...");
+                  },
+                  "",
+                  () => {
+                    setTypingStatus("Done Deleting");
+                  },
+                ]}
+                speed={65}
+                className="font-bold md:pt-10 md:text-[2.3rem] text-[1.8rem] ms-3 flex mx-auto  md:ms-11 text-white"
+                repeat={Infinity}
+              />
+            </div>
+
+            <div className="w-full  hidden md:flex flex-col items-center mt-10">
               {product.map((e) => (
                 <ProductCard {...e} />
+              ))}
+            </div>
+            <div className="w-full  flex md:hidden flex-col items-center mt-10">
+              {product.map((e) => (
+                <ProductCard2 {...e} />
               ))}
             </div>
           </div>
@@ -392,14 +379,14 @@ const HomePage = () => {
           </div> */}
         </div>
       </section>
-      <section id="about" className="pt-10 ">
-        <div className="flex flex-row justify-between pb-7 sectionBg bg-cover overflow-hidden">
+      <section id="about" className="pt-10">
+        <div className="flex flex-row justify-between pb-7  sectionBg bg-cover overflow-hidden">
           <img
             src={left}
             alt=""
-            className="2xl:h-[300px] h-[200px] mt-auto mb-[-55px]"
+            className="2xl:h-[300px] hidden lg:flex h-[200px] mt-auto mb-[-55px]"
           />
-          <div className="mt-10 flex flex-col items-center">
+          <div className="mt-10 flex w-[90%] lg:w-full mx-auto flex-col items-center">
             <motion.div
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 1 }}
@@ -409,7 +396,7 @@ const HomePage = () => {
                 // delay: e.delay,
                 duration: 0.8,
               }}
-              className="text-text font-semibold text-[2.5rem] mb-3 text-center"
+              className="text-text font-semibold text-[1.9rem] md:text-[2.5rem] mb-3 text-center"
             >
               About Us
             </motion.div>
@@ -436,7 +423,7 @@ const HomePage = () => {
                   delay: 0.2,
                   duration: 0.8,
                 }}
-                className="w-[100%] havig text-2xl  text-center text-text/80"
+                className="w-[100%] havig md:text-2xl text-xl  text-center text-text/80"
               >
                 Our company, initially named Digital Engineering Group, was
                 established in December 2019 and later changed and registered to
@@ -467,7 +454,7 @@ const HomePage = () => {
                   delay: 0.4,
                   duration: 0.8,
                 }}
-                className=""
+                className="mb-4"
               >
                 <button className="button mt-5">Learn more</button>
               </motion.div>
@@ -476,17 +463,17 @@ const HomePage = () => {
           <img
             src={right}
             alt=""
-            className="2xl:h-[300px] h-[200px] mt-auto mb-[-55px]"
+            className="2xl:h-[300px] hidden lg:flex h-[200px] mt-auto mb-[-55px]"
           />
         </div>
       </section>
       <section id="contact">
-        <div className="h-[550px]">
+        <div className="pb-20 pt-5">
           <div className="mt-10 w-full overflow-hidden">
             <div className="text-white font-bold text-[3rem] text-center">
               Contact Us
             </div>
-            <div className=" flex justify-center">
+            <div className=" flex   justify-center">
               <motion.div
                 viewport={{ once: true, margin: "200px" }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -495,7 +482,7 @@ const HomePage = () => {
                   // stiffness: 400,
                   duration: 0.8,
                 }}
-                className="w-[90%] lg:w-[90%] 2xl:w-[80%] mt-5 flex justify-around items-center backdrop-blur-sm bg-text/40 border-2 rounded-xl border-div  h-[400px]"
+                className="w-[90%] lg:w-[90%] py-10 2xl:w-[80%] mt-5 lg:flex justify-around items-center backdrop-blur-sm bg-text/40 border-2 rounded-xl border-div "
               >
                 <motion.div
                   viewport={{ once: true }}
@@ -507,7 +494,7 @@ const HomePage = () => {
                     delay: 0.7,
                     duration: 2,
                   }}
-                  className="bg-text/20 backdrop-blur-md shadow-lg border-div border-2  shadow-text/20 w-[45%] flex flex-col rounded-lg gap-3 p-8 "
+                  className="bg-text/20 backdrop-blur-md shadow-lg border-div border-2  shadow-text/20  flex flex-col rounded-lg gap-3 p-8 mx-auto my-5  lg:m-0 w-[90%] md:w-[70%] lg:w-[45%]"
                 >
                   <div className="flex justify-between">
                     <TextInput
@@ -548,7 +535,7 @@ const HomePage = () => {
                     delay: 1,
                     duration: 3,
                   }}
-                  className="bg-text/20 border-2 border-div p-7 backdrop-blur-md shadow-lg shadow-text/20 rounded-lg w-[45%]"
+                  className="bg-text/20 border-2 border-div p-7 backdrop-blur-md shadow-lg shadow-text/20 rounded-lg mx-auto my-5  lg:m-0 w-[90%] md:w-[70%] lg:w-[45%]"
                 >
                   <div className="text-2xl text-white font-semibold">
                     Information
@@ -557,27 +544,63 @@ const HomePage = () => {
                     Contact us and we'll get back to you within 24 hours.
                   </div>
                   <div className="flex flex-col mt-3 items-start gap-2">
-                    <div className="flex mt-3">
-                      <FaLocationDot className="me-3 my-auto w-20 text-white text-[30px]" />
-                      <div className="text-xl font-semibold text-white">
+                    <table cellPadding={10}>
+                      <tr className="">
+                        <td className="w-10 text-start">
+                          <FaLocationDot className=" my-auto w-full text-white text-[20px]" />
+                        </td>
+                        <td className="text-lg md:text-xl  text-white">
+                          No.15/1921, 12th Street, Paung Laung 2 Wardz,
+                          Pyinmana, Naypyitaw
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="w-10 text-start">
+                          <MdEmail className="my-auto w-full mr-auto text-white text-[30px]" />
+                        </td>
+                        <td className="text-lg md:text-xl  text-white">
+                          {" "}
+                          <a href="mailto:digitalengineeringtech.mm@gmail.com">
+                            digitalengineeringtech.mm@gmail.com
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="w-10 text-start">
+                          <FaPhone className="my-auto w-full text-white text-[30px]" />
+                        </td>
+                        <td className="text-lg md:text-xl  text-white">
+                          <a href="tel:+959988340001">+959-988-34-0001</a>
+                        </td>
+                      </tr>
+                    </table>
+                    {/* <div className="flex mt-3">
+                      <div className="w-28 text-start bg-red-300">
+                        <FaLocationDot className=" my-auto w-full text-white text-[30px]" />
+                      </div>
+                      <div className="text-lg md:text-xl md:font-semibold text-white">
                         No.15/1921, 12th Street, Paung Laung 2 Wardz, Pyinmana,
                         Naypyitaw
                       </div>
                     </div>
-                    <div className="flex mt-3">
-                      <MdEmail className="me-3 my-auto w-12 text-white text-[30px]" />
-                      <div className="text-xl font-semibold text-white">
+                    <div className="flex mt-3 ">
+                      <div className="w-20 text-start bg-red-300">
+                        <MdEmail className="my-auto w-full mr-auto text-white text-[30px]" />
+                      </div>
+                      <div className="text-lg md:text-xl md:font-semibold text-white">
                         <a href="mailto:digitalengineeringtech.mm@gmail.com">
                           digitalengineeringtech.mm@gmail.com
                         </a>
                       </div>
                     </div>
                     <div className="flex mt-3">
-                      <FaPhone className="me-3 my-auto w-12 text-white text-[25px]" />
-                      <div className="text-xl font-semibold text-white">
+                      <div className="w-20 text-start bg-red-300">
+                        <FaPhone className="my-auto w-full text-white text-[30px]" />
+                      </div>
+                      <div className="text-lg md:text-xl md:font-semibold text-white">
                         <a href="tel:+959988340001">+959-988-34-0001</a>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </motion.div>
               </motion.div>
