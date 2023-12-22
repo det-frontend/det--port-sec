@@ -126,6 +126,7 @@ const HomePage = () => {
                     },
                   ]}
                   speed={65}
+                  cursor={false}
                   // style={{ fontSize: "3em" }}
                   className="font-bold pt-10 md:text-[3em] text-2xl text-white"
                   repeat={Infinity}
@@ -182,6 +183,7 @@ const HomePage = () => {
                     },
                   ]}
                   speed={65}
+                  cursor={false}
                   style={{ fontSize: "1.7em" }}
                   className="font-bold pt-2 md:pt-5 text-white"
                   repeat={Infinity}
@@ -270,6 +272,7 @@ const HomePage = () => {
                 },
               ]}
               speed={65}
+              cursor={false}
               // style={{ fontSize: "2.3em" }}
               className="font-bold md:pt-10 text-[1.5rem] md:text-[2.3rem]  md:ms-11 text-text"
               repeat={Infinity}
@@ -306,7 +309,7 @@ const HomePage = () => {
                 // mousewheel={true}
                 keyboard={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                className="mySwiper h-[500px]"
+                className="mySwiper h-[535px]"
               >
                 {service.map((e) => (
                   <SwiperSlide className="pt-16">
@@ -358,7 +361,8 @@ const HomePage = () => {
                   },
                 ]}
                 speed={65}
-                className="font-bold md:pt-10 md:text-[2.3rem] text-[1.5rem] ms-3 flex mx-auto  md:ms-11 text-white"
+                cursor={false}
+                className="font-bold md:pt-10 md:text-[2.3rem] h-24 text-[1.5rem] ms-3 flex mx-auto  md:ms-11 text-white"
                 repeat={Infinity}
               />
             </div>
@@ -561,8 +565,7 @@ const HomePage = () => {
                         <td className="text-lg lg:hidden md:text-xl  text-white">
                           {" "}
                           <a href="mailto:digitalengineeringtech.mm@gmail.com">
-                            digitalengineeringtech
-                            .mm@gmail.com
+                            digitalengineeringtech .mm@gmail.com
                           </a>
                         </td>
                         <td className="text-lg md:text-xl hidden lg:flex text-white">
