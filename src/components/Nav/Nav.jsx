@@ -65,6 +65,7 @@ const Nav = () => {
         delay: 0.2,
         duration: 0.8,
       }}
+      className="overflow-hidden"
     >
       <div className=" h-[85px] bg-[#19072B20] backdrop-blur-lg shadow-2xl  flex justify-center">
         <div className="w-[80%] items-center flex justify-between px-3">

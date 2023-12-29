@@ -257,7 +257,7 @@ const HomePage = () => {
       <section id="service">
         <div className="  bg-[#151E2F] beeBg pt-8 md:pt-12 bg-cover ">
           {" "}
-          <div className="mt-[-90px] lg:mt-[-125px] w-full gap-3 md:gap-10 flex justify-center">
+          <div className="mt-[-90px] lg:mt-[-125px] w-full gap-2 md:gap-10 flex justify-center">
             <ServiceCard img={lamp} text="Innovation" />
             <ServiceCard img={design} text="Designing" />
             <ServiceCard img={coding} text="Developing" />
