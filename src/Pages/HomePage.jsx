@@ -311,7 +311,7 @@ const HomePage = () => {
                 // delay: e.delay,
                 duration: 0.8,
               }}
-              className="font-bold md:pt-10 pt-10 mx-auto flex text-center justify-center text-[1.8rem] md:text-[2.3rem] text-darkGreen"
+              className="font-bold md:pt-10 pt-6 mx-auto flex text-center justify-center text-[1.8rem] md:text-[2.3rem] text-darkGreen"
             >
               Services that we offer
             </motion.div>
@@ -350,7 +350,7 @@ const HomePage = () => {
                 className="mySwiper h-[535px]"
               >
                 {service.map((e) => (
-                  <SwiperSlide className="pt-16">
+                  <SwiperSlide className="pt-12 md:pt-16">
                     {/* <div className="" ref={ref}> */}
                     <motion.div
                       viewport={{ once: true, margin: "250px" }}
