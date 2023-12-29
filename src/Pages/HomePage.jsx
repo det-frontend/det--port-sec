@@ -376,7 +376,7 @@ const HomePage = () => {
         </div>
       </section>
       <section id="product">
-        <div className=" flex-col items-center flex justify-center pt-5 md:pt-7">
+        <div className=" flex-col items-center flex justify-center pb-5 md:pb-14 md:pt-7">
           <div className="w-[90%] mt-5 mx-auto">
             <motion.div
               viewport={{ once: true }}
@@ -429,9 +429,9 @@ const HomePage = () => {
               ))}
             </div>
           </div>
-          <div className="overflow-hidden w-full pt-20 lg:pt-28">
+          {/* <div className="overflow-hidden w-full pt-20 lg:pt-28">
             <ScrollX />
-          </div>
+          </div> */}
         </div>
       </section>
       <section id="about" className="pt-5">
