@@ -347,7 +347,7 @@ const HomePage = () => {
                 // mousewheel={true}
                 keyboard={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                className="mySwiper h-[535px]"
+                className="mySwiper h-[500px] md:h-[535px]"
               >
                 {service.map((e) => (
                   <SwiperSlide className="pt-12 md:pt-16">
