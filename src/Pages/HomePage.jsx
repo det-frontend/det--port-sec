@@ -10,6 +10,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import left from "../assets/left.png";
 import right from "../assets/rightbutton.png";
 import { useNavigate } from "react-router";
+import coding from "../assets/coding.png";
+import design from "../assets/logo-design.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,6 +26,8 @@ import { FaPhone } from "react-icons/fa6";
 import ScrollX from "../components/ScrollX";
 import { Link, NavLink } from "react-router-dom";
 import ProductCard2 from "../components/Card/ProductCard2";
+import ServiceCard from "../components/Card/ServiceCard";
+import lamp from "../assets/lamp.png";
 
 const HomePage = () => {
   const [render, setRender] = useState(false);
@@ -33,7 +37,8 @@ const HomePage = () => {
   return (
     <div className="circuitBg bg-cover ">
       <section className="" id="home">
-        <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[730px] bg-cover bg-top">
+        <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[660px] pb-10 bg-cover bg-top">
+          {/* <div className="  flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[730px] bg-cover bg-top"> */}
           <div className="w-[90%] lg:ms-40 xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">
             <div className="flex mt-[100px] pt-6 md:mt-0 lg:ms-8 w-full lg:w-[60%] h-[300px] flex-col items-start">
               {/* <motion.div
@@ -185,7 +190,7 @@ const HomePage = () => {
                   speed={65}
                   cursor={false}
                   style={{ fontSize: "1.7em" }}
-                  className="font-bold pt-2 h-20 md:pt-5 text-white"
+                  className="font-bold pt-2 h-20 md:pt-5 text-darkGreen"
                   repeat={Infinity}
                 />
               </motion.div>
@@ -210,7 +215,7 @@ const HomePage = () => {
                   About us
                 </div> */}
                 <a href="/#about">
-                  <button className="button-wh border-red-300">About us</button>
+                  <button className="button-wh ">About us</button>
                 </a>
               </motion.div>
             </div>
@@ -250,9 +255,29 @@ const HomePage = () => {
         </div>
       </section>
       <section id="service">
-        <div className="  sectionBg pt-8 md:pt-12 bg-cover ">
+        <div className="  bg-[#151E2F] beeBg pt-8 md:pt-12 bg-cover ">
+          {" "}
+          <div className="mt-[-125px] w-full gap-10 flex justify-center">
+            <ServiceCard img={lamp} text="Innovation" />
+            <ServiceCard img={design} text="Designing" />
+            <ServiceCard img={coding} text="Developing" />
+          </div>
+          <div className=" mt-[-80px] absolute">
+            <img
+              src={left}
+              alt=""
+              className="2xl:h-[250px] opacity-40 rotate-90  hidden lg:flex h-[200px] mt-auto mb-[-55px]"
+            />
+          </div>
+          <div className=" mt-[-83px] right-0 absolute">
+            <img
+              src={left}
+              alt=""
+              className="2xl:h-[250px] opacity-40 rotate-180 hidden lg:flex h-[200px] mt-auto mb-[-55px]"
+            />
+          </div>
           <div className="w-[95%] xl:w-[90%] md:pt-5 mx-auto">
-            <TypeAnimation
+            {/* <TypeAnimation
               sequence={[
                 1000,
                 () => {
@@ -274,9 +299,22 @@ const HomePage = () => {
               speed={65}
               cursor={false}
               // style={{ fontSize: "2.3em" }}
-              className="font-bold md:pt-10 text-[1.5rem] md:text-[2.3rem]  md:ms-11 text-text"
+              className="font-bold md:pt-10 text-[1.5rem] md:text-[2.3rem]  md:ms-11 text-darkGreen"
               repeat={Infinity}
-            />
+            /> */}
+            <motion.div
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 1 }}
+              initial={{ opacity: 0, y: "100%" }}
+              transition={{
+                // stiffness: 400,
+                // delay: e.delay,
+                duration: 0.8,
+              }}
+              className="font-bold md:pt-10 mx-auto flex text-center justify-center text-[1.5rem] md:text-[2.3rem] text-darkGreen"
+            >
+              Services that we offer
+            </motion.div>
             <div className="md:mt-2 flex pb-8 md:pb-12 items-center">
               <Swiper
                 slidesPerView={1}
@@ -338,10 +376,20 @@ const HomePage = () => {
         </div>
       </section>
       <section id="product">
-        <div className=" flex-col items-center flex justify-center  md:pb-12 pt-5 md:pt-12">
+        <div className=" flex-col items-center flex justify-center pt-5 md:pt-7">
           <div className="w-[90%] mt-5 mx-auto">
-            <div className=" flex justify-center text-center">
-              <TypeAnimation
+            <motion.div
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 1 }}
+              initial={{ opacity: 0, y: "100%" }}
+              transition={{
+                // stiffness: 400,
+                // delay: e.delay,
+                duration: 0.8,
+              }}
+              className=" flex justify-center text-center"
+            >
+              {/* <TypeAnimation
                 sequence={[
                   1000,
                   () => {
@@ -364,8 +412,11 @@ const HomePage = () => {
                 cursor={false}
                 className="font-bold md:pt-10 md:text-[2.3rem] h-24 text-[1.5rem] ms-3 flex mx-auto  md:ms-11 text-white"
                 repeat={Infinity}
-              />
-            </div>
+              /> */}
+              <div className="font-bold mx-auto flex text-center justify-center text-[1.5rem] md:text-[2.8rem] text-white">
+                Products that we provide
+              </div>
+            </motion.div>
 
             <div className="w-full  hidden md:flex flex-col items-center mt-10">
               {product.map((e) => (
@@ -378,13 +429,13 @@ const HomePage = () => {
               ))}
             </div>
           </div>
-          {/* <div className="overflow-hidden w-full pt-32">
+          <div className="overflow-hidden w-full pt-28">
             <ScrollX />
-          </div> */}
+          </div>
         </div>
       </section>
-      <section id="about" className="pt-10">
-        <div className="flex flex-row justify-between pb-7  sectionBg bg-cover overflow-hidden">
+      <section id="about" className="pt-5">
+        <div className="flex flex-row justify-between pb-7  bg-[#151E2F] bg-cover overflow-hidden">
           <img
             src={left}
             alt=""
@@ -486,7 +537,7 @@ const HomePage = () => {
                   // stiffness: 400,
                   duration: 0.8,
                 }}
-                className="w-[90%] lg:w-[90%] py-10 2xl:w-[80%] mt-5 lg:flex justify-around items-center backdrop-blur-sm bg-text/40 border-2 rounded-xl border-div "
+                className="w-[90%] lg:w-[90%] py-10 2xl:w-[80%] mt-5 lg:flex justify-around items-center backdrop-blur-md bg-darkBg/20 border-2 rounded-xl border-darkGreen "
               >
                 <motion.div
                   viewport={{ once: true }}
@@ -498,7 +549,7 @@ const HomePage = () => {
                     delay: 0.7,
                     duration: 2,
                   }}
-                  className="bg-text/20 backdrop-blur-md shadow-lg border-div border-2  shadow-text/20  flex flex-col rounded-lg gap-3 p-8 mx-auto my-5  lg:m-0 w-[90%] md:w-[70%] lg:w-[45%]"
+                  className="bg-darkBg/10 backdrop-blur-md shadow-lg border-darkGreen border-2  shadow-darkBg/10  flex flex-col rounded-lg gap-3 p-8 mx-auto my-5  lg:m-0 w-[90%] md:w-[70%] lg:w-[45%]"
                 >
                   <div className="flex justify-between">
                     <TextInput
@@ -525,7 +576,7 @@ const HomePage = () => {
                     placeholder="Text .... "
                     minRows={5}
                   />
-                  <div className=" me-8 justify-center bg-div text-xl font-semibold hover:bg-transparent duration-100 hover:border-white hover:text-white border-[3px] w-full border-div px-4 py-2 flex rounded-md text-white">
+                  <div className=" me-8 justify-center  text-xl font-semibold hover:bg-transparent duration-100 hover:border-darkGreen hover:text-white border-[3px] w-full border-div px-4 py-2 flex rounded-md text-white">
                     Submit
                   </div>
                 </motion.div>
@@ -539,7 +590,7 @@ const HomePage = () => {
                     delay: 1,
                     duration: 3,
                   }}
-                  className="bg-text/20 border-2 border-div p-7 backdrop-blur-md shadow-lg shadow-text/20 rounded-lg mx-auto my-5  lg:m-0 w-[90%] md:w-[70%] lg:w-[45%]"
+                  className="bg-darkBg/10 border-2 border-darkGreen p-7 backdrop-blur-md shadow-lg shadow-darkBg/10 rounded-lg mx-auto my-5  lg:m-0 w-[90%] md:w-[70%] lg:w-[45%]"
                 >
                   <div className="text-2xl text-white font-semibold">
                     Information

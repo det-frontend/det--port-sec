@@ -66,7 +66,7 @@ const Nav = () => {
         duration: 0.8,
       }}
     >
-      <div className="bgImg h-[85px] shadow-2xl shadow-primary/10 flex justify-center">
+      <div className=" h-[85px] bg-[#19072B40] backdrop-blur-lg shadow-2xl  flex justify-center">
         <div className="w-[80%] items-center flex justify-between px-3">
           <img src={logo} className="h-16 ms-[-50px]" alt="err" />
           <div className="lg:flex items-center gap-3 hidden">
@@ -82,60 +82,43 @@ const Nav = () => {
                   />
                 </a>
               ))}
-
-            {!(param == "/blog") ? (
-              <Link to={"#"}>
-                {/* <Link onClick={() => setParam("/blog")} to={"/blog"}> */}
-                {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
-                  Blog
-                </div> */}
-                <button className="button">Blog</button>
-              </Link>
-            ) : (
-              <Link onClick={() => setParam()} to={"/"}>
-                {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
-                  Back to Home
-                </div> */}
-                <button className="button">Back to Home</button>
-              </Link>
-            )}
           </div>
           {/* menu  */}
           <div onClick={() => setChg(!chg)} className="lg:hidden ms-auto">
             {chg ? (
-              <MdClose className="text-4xl duration-100 text-primary" />
+              <MdClose className="text-4xl duration-100 text-text" />
             ) : (
-              <HiMenu className="text-4xl duration-100 text-primary" />
+              <HiMenu className="text-4xl duration-100 text-text" />
             )}
           </div>
           {/* {chg && !show ? ( */}
           <div
             className={`w-[90%] mx-auto lg:hidden ${
               chg ? "opacity-100 translate-y-[350px]" : "opacity-0"
-            } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-[#E4F8FF] backdrop-blur-md fixed`}
+            } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-[#19072B40] backdrop-blur-2xl fixed`}
           >
-            <ul className="list-none lg:hidden grid grid-cols-2 gap-2 text-button justify-end text-center items-center flex-col">
+            <ul className="list-none lg:hidden grid grid-cols-2 gap-2 text-text justify-end text-center items-center flex-col">
               {navList.map((e) => (
                 <motion.a
                   href={e.link}
                   key={e.id}
                   // whileHover={{ scale: 1.2 }}
                   // key={e.id}
-                  className="hover:text-secondary text-2xl justify-center duration-75 items-center font-semibold flex p-6 font-poppins"
+                  className="hover:text-darkGreen text-2xl justify-center duration-75 items-center font-semibold flex p-6 font-poppins"
                 >
                   {/* <div className="flex me-2 text-2xl">{e.icon}</div> */}
                   {e.name}
                 </motion.a>
               ))}
-              <li>
+              {/* <li> */}
                 {/* <Link onClick={() => setParam("/blog")} to={"/blog"}> */}
-                <Link>
+                {/* <Link> */}
                   {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
                   Blog
                 </div> */}
-                  <button className="button">Blog</button>
-                </Link>
-              </li>
+                  {/* <button className="button">Blog</button> */}
+                {/* </Link> */}
+              {/* </li> */}
             </ul>
           </div>
           {/* menu end  */}

@@ -19,7 +19,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     damping: 50,
     stiffness: 400,
   });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
+  const velocityFactor = useTransform(smoothVelocity, [0, 6000], [0, 5], {
     clamp: false,
   });
 
@@ -62,7 +62,7 @@ export default function ScrollX() {
       </ParallaxText>
       <ParallaxText baseVelocity={5}>
         {" "}
-        <span className="text-white">iot house  iot house</span>
+        <span className="text-darkGreen">iot house iot house</span>
       </ParallaxText>
     </section>
   );

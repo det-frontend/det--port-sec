@@ -6,8 +6,12 @@ export default {
       colors: {
         primary: "#020E34",
         secondary: "#113768",
+        darkGreen: "#00FEB5",
+        darkBg: "#142938",
+        // secondary: "#113768",
         button: "#0598CE",
-        text: "#113768",
+        text: "#00FEB5",
+        bg: "#151E2F",
       },
       // colors: {
       //   primary: "#020E34",

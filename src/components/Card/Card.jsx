@@ -11,7 +11,7 @@ const Card = ({ title, subtitle, id, img, delay }) => {
         type: "spring",
         stiffness: 400,
       }}
-      className="relative shadow-primary/20  flex w-[350px] md:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+      className="relative shadow-darkGreen/20  flex w-[350px] md:w-96 flex-col rounded-xl bg-[#142938] border border-darkGreen bg-clip-border text-darkGreen shadow-md"
     >
       <div className="relative mx-4 -mt-6 h-48 overflow-hidden rounded-xl bg-clip-border text-white shadow-lg bg-gradient-to-r from-blue-500 to-blue-600">
         <img src={img} className="object-center object-cover" alt="" />
