@@ -66,7 +66,7 @@ const Nav = () => {
         duration: 0.8,
       }}
     >
-      <div className=" h-[85px] bg-[#19072B40] backdrop-blur-lg shadow-2xl  flex justify-center">
+      <div className=" h-[85px] bg-[#19072B20] backdrop-blur-lg shadow-2xl  flex justify-center">
         <div className="w-[80%] items-center flex justify-between px-3">
           <img src={logo} className="h-16 ms-[-50px]" alt="err" />
           <div className="lg:flex items-center gap-3 hidden">
@@ -93,9 +93,9 @@ const Nav = () => {
           </div>
           {/* {chg && !show ? ( */}
           <div
-            className={`w-[90%] mx-auto lg:hidden ${
+            className={`w-[90%] mx-auto lg:hidden  ${
               chg ? "opacity-100 translate-y-[350px]" : "opacity-0"
-            } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-[#19072B40] backdrop-blur-2xl fixed`}
+            } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-[#151E2F] border border-text fixed`}
           >
             <ul className="list-none lg:hidden grid grid-cols-2 gap-2 text-text justify-end text-center items-center flex-col">
               {navList.map((e) => (
@@ -111,13 +111,13 @@ const Nav = () => {
                 </motion.a>
               ))}
               {/* <li> */}
-                {/* <Link onClick={() => setParam("/blog")} to={"/blog"}> */}
-                {/* <Link> */}
-                  {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
+              {/* <Link onClick={() => setParam("/blog")} to={"/blog"}> */}
+              {/* <Link> */}
+              {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
                   Blog
                 </div> */}
-                  {/* <button className="button">Blog</button> */}
-                {/* </Link> */}
+              {/* <button className="button">Blog</button> */}
+              {/* </Link> */}
               {/* </li> */}
             </ul>
           </div>

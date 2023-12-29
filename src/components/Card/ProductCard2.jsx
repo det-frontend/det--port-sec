@@ -11,9 +11,9 @@ const ProductCard2 = ({ title, subtitle, id, img, delay }) => {
         type: "spring",
         stiffness: 400,
       }}
-      className="relative shadow-primary/20 flex w-[350px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+      className="relative shadow-primary/20 flex w-[350px] flex-col rounded-xl bg-bg bg-clip-border border border-text text-text shadow-md"
     >
-      <div className="relative mx-4 -mt-6 h-48 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+      <div className="relative mx-4 -mt-6 h-48 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-bg shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
         <img src={img} className="object-center object-cover" alt="" />
       </div>
       <div className="p-6">
@@ -29,7 +29,7 @@ const ProductCard2 = ({ title, subtitle, id, img, delay }) => {
         {/* <div
           data-ripple-light="true"
           type="button"
-          className="select-none rounded-lg bg-[#268391] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          className="select-none rounded-lg bg-[#268391] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-bg shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         >
           Read More
         </div> */}

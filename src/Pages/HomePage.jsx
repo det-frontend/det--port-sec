@@ -37,10 +37,10 @@ const HomePage = () => {
   return (
     <div className="circuitBg bg-cover ">
       <section className="" id="home">
-        <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[660px] pb-10 bg-cover bg-top">
+        <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[390px]  md:h-[560px] xl:h-[660px] pb-10 bg-cover bg-top">
           {/* <div className="  flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[730px] bg-cover bg-top"> */}
           <div className="w-[90%] lg:ms-40 xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">
-            <div className="flex mt-[100px] pt-6 md:mt-0 lg:ms-8 w-full lg:w-[60%] h-[300px] flex-col items-start">
+            <div className="flex mt-[50px] pt-6 md:mt-0 lg:ms-8 w-full lg:w-[60%] h-[300px] flex-col items-start">
               {/* <motion.div
                 viewport={{ once: true }}
                 whileInView={{ x: 1, opacity: 1 }}
@@ -257,7 +257,7 @@ const HomePage = () => {
       <section id="service">
         <div className="  bg-[#151E2F] beeBg pt-8 md:pt-12 bg-cover ">
           {" "}
-          <div className="mt-[-125px] w-full gap-10 flex justify-center">
+          <div className="mt-[-90px] lg:mt-[-125px] w-full gap-3 md:gap-10 flex justify-center">
             <ServiceCard img={lamp} text="Innovation" />
             <ServiceCard img={design} text="Designing" />
             <ServiceCard img={coding} text="Developing" />
@@ -311,7 +311,7 @@ const HomePage = () => {
                 // delay: e.delay,
                 duration: 0.8,
               }}
-              className="font-bold md:pt-10 mx-auto flex text-center justify-center text-[1.5rem] md:text-[2.3rem] text-darkGreen"
+              className="font-bold md:pt-10 pt-10 mx-auto flex text-center justify-center text-[1.8rem] md:text-[2.3rem] text-darkGreen"
             >
               Services that we offer
             </motion.div>
@@ -413,7 +413,7 @@ const HomePage = () => {
                 className="font-bold md:pt-10 md:text-[2.3rem] h-24 text-[1.5rem] ms-3 flex mx-auto  md:ms-11 text-white"
                 repeat={Infinity}
               /> */}
-              <div className="font-bold mx-auto flex text-center justify-center text-[1.5rem] md:text-[2.8rem] text-white">
+              <div className="font-bold mx-auto flex text-center justify-center text-[1.7rem] md:text-[2.8rem] text-white">
                 Products that we provide
               </div>
             </motion.div>
@@ -423,13 +423,13 @@ const HomePage = () => {
                 <ProductCard {...e} />
               ))}
             </div>
-            <div className="w-full  flex md:hidden flex-col items-center mt-10">
+            <div className="w-full  flex md:hidden flex-col items-center mt-14">
               {product.map((e) => (
                 <ProductCard2 {...e} />
               ))}
             </div>
           </div>
-          <div className="overflow-hidden w-full pt-28">
+          <div className="overflow-hidden w-full pt-20 lg:pt-28">
             <ScrollX />
           </div>
         </div>
