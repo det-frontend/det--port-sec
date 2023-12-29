@@ -311,11 +311,11 @@ const HomePage = () => {
                 // delay: e.delay,
                 duration: 0.8,
               }}
-              className="font-bold md:pt-10 pt-6 mx-auto flex text-center justify-center text-[1.8rem] md:text-[2.3rem] text-darkGreen"
+              className="font-bold md:pt-10 pt-9 mx-auto flex text-center justify-center text-[1.8rem] md:text-[2.3rem] text-darkGreen"
             >
               Services that we offer
             </motion.div>
-            <div className="md:mt-2 flex pb-8 md:pb-12 items-center">
+            <div className="md:mt-2 flex pb-3 md:pb-12 items-center">
               <Swiper
                 slidesPerView={1}
                 // spaceBetween={10}
