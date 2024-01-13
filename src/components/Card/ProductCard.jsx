@@ -3,7 +3,9 @@ import iot from "../../assets/iot.jpg";
 import { motion } from "framer-motion";
 import product from "../../content/product";
 import "./product.css";
+import { useTranslation } from 'react-i18next';
 const ProductCard = ({ id, title, subtitle, img }) => {
+    const { t, i18n } = useTranslation();
   //   console.log(product);
   return (
     <motion.div
@@ -48,7 +50,7 @@ const ProductCard = ({ id, title, subtitle, img }) => {
                 </div>
               </div>
               <button className="button mt-auto w-60 ms-auto me-6  ">
-                Learn more
+                  {t("BTN")}
               </button>
 
               {/* <button className=" mb-4 mt-auto me-5 bg-button xl:text-lg hover:bg-transparent duration-100 hover:text-button border-2 border-button px-4 py-2 ms-auto flex rounded-md text-white">

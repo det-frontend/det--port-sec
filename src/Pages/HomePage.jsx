@@ -20,7 +20,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import ProductCard from "../components/Card/ProductCard";
-import product from "../content/product";
+// import product from "../content/product";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import ScrollX from "../components/ScrollX";
@@ -33,17 +33,11 @@ import {LanguagePicker} from "../components/LanguagePicker.jsx";
 const HomePage = () => {
     const { t, i18n } = useTranslation();
   const [render, setRender] = useState(false);
-  // const [data , setData] =  useState()
-  //   if(i18n.language === "en"){
-  //       setData(i18n.store.data.en.translation.HOME.CARD)
-  //   }else{
-  //       setData(i18n.store.data.mm.translation.HOME.CARD)
-  //   }
-  // const navigate = useNavigate();
   const { scrollY } = useScroll();
   const [typingStatus, setTypingStatus] = useState("Initializing")
 
      let data =  i18n.language == "en"?(i18n.store.data.en.translation.SERVICE.CARD):(i18n.store.data.mm.translation.SERVICE.CARD)
+     let product =  i18n.language == "en"?(i18n.store.data.en.translation.PRODUCT.CARD):(i18n.store.data.mm.translation.PRODUCT.CARD)
 
 
     console.log(data)
@@ -377,32 +371,8 @@ const HomePage = () => {
               }}
               className=" flex justify-center text-center"
             >
-              {/* <TypeAnimation
-                sequence={[
-                  1000,
-                  () => {
-                    setTypingStatus("Typing...");
-                  },
-                  "Products that we provide",
-                  () => {
-                    setTypingStatus("Done Typing");
-                  },
-                  5000,
-                  () => {
-                    setTypingStatus("Deleting...");
-                  },
-                  "",
-                  () => {
-                    setTypingStatus("Done Deleting");
-                  },
-                ]}
-                speed={65}
-                cursor={false}
-                className="font-bold md:pt-10 md:text-[2.3rem] h-24 text-[1.5rem] ms-3 flex mx-auto  md:ms-11 text-white"
-                repeat={Infinity}
-              /> */}
               <div className="font-bold mx-auto flex text-center justify-center text-[1.7rem] md:text-[2.8rem] text-white">
-                Products that we provide
+                  {t("PRODUCT.TITLE")}
               </div>
             </motion.div>
 
@@ -441,7 +411,7 @@ const HomePage = () => {
               }}
               className="text-text font-semibold text-[1.9rem] md:text-[2.5rem] mb-3 text-center"
             >
-              About Us
+                {t('ABOUT.TITLE')}
             </motion.div>
             <div className="flex flex-col items-center gap-1">
               {/* <motion.div
@@ -468,12 +438,7 @@ const HomePage = () => {
                 }}
                 className="w-[100%] havig md:text-2xl text-xl  text-center text-text/80"
               >
-                Our company, initially named Digital Engineering Group, was
-                established in December 2019 and later changed and registered to
-                Digital Engineering Tech Ltd in November 2021. We offer a
-                variety of services with a primary focus on IOT Engineering and
-                other IT services. Throughout our journey, our company has
-                achieved several significant milestones
+                  {t("ABOUT.DESC")}
               </motion.div>
               {/* <motion.div
                 viewport={{ once: true }}
@@ -499,7 +464,7 @@ const HomePage = () => {
                 }}
                 className="mb-4"
               >
-                <button className="button mt-5">Learn more</button>
+                <button className="button mt-5">{t("BTN")}</button>
               </motion.div>
             </div>
           </div>
@@ -514,7 +479,7 @@ const HomePage = () => {
         <div className="pb-20 pt-5">
           <div className="mt-10 w-full overflow-hidden">
             <div className="text-white font-bold text-[3rem] text-center">
-              Contact Us
+                {t("CONTACT.TITLE")}
             </div>
             <div className=" flex   justify-center">
               <motion.div
@@ -544,24 +509,24 @@ const HomePage = () => {
                       className="w-[48%]"
                       variant="filled"
                       size="lg"
-                      placeholder="First Name"
+                      placeholder={t("CONTACT.FORM.F")}
                     />
                     <TextInput
                       className="w-[48%]"
                       variant="filled"
                       size="lg"
-                      placeholder="Last Name"
+                      placeholder={t("CONTACT.FORM.L")}
                     />
                   </div>
                   <TextInput
                     variant="filled"
                     size="lg"
-                    placeholder="Enter your email"
+                    placeholder={t("CONTACT.FORM.EMAIL")}
                   />
                   <Textarea
                     variant="filled"
                     size="lg"
-                    placeholder="Text .... "
+                    placeholder={t("CONTACT.FORM.TEXT")}
                     minRows={5}
                   />
                   <div className=" me-8 justify-center  text-xl font-semibold hover:bg-transparent duration-100 hover:border-darkGreen hover:text-white border-[3px] w-full border-div px-4 py-2 flex rounded-md text-white">
@@ -581,10 +546,10 @@ const HomePage = () => {
                   className="bg-darkBg/10 border-2 border-darkGreen p-7 backdrop-blur-md shadow-lg shadow-darkBg/10 rounded-lg mx-auto my-5  lg:m-0 w-[90%] md:w-[70%] lg:w-[45%]"
                 >
                   <div className="text-2xl text-white font-semibold">
-                    Information
+                      {t("CONTACT.INFO.TITLE")}
                   </div>
                   <div className="text-lg font-semibold text-white ">
-                    Contact us and we'll get back to you within 24 hours.
+                      {t("CONTACT.INFO.SUBTITLE")}
                   </div>
                   <div className="flex flex-col mt-3 items-start gap-2">
                     <table cellPadding={10}>
@@ -593,8 +558,7 @@ const HomePage = () => {
                           <FaLocationDot className=" my-auto w-full text-white text-[20px]" />
                         </td>
                         <td className="text-lg md:text-xl  text-white">
-                          No.15/1921, 12th Street, Paung Laung 2 Wardz,
-                          Pyinmana, Naypyitaw
+                            {t("CONTACT.INFO.ADD")}
                         </td>
                       </tr>
                       <tr>
@@ -604,13 +568,13 @@ const HomePage = () => {
                         <td className="text-lg lg:hidden md:text-xl  text-white">
                           {" "}
                           <a href="mailto:digitalengineeringtech.mm@gmail.com">
-                            digitalengineeringtech .mm@gmail.com
+                              {t("CONTACT.INFO.EMAIL")}
                           </a>
                         </td>
                         <td className="text-lg md:text-xl hidden lg:flex text-white">
                           {" "}
                           <a href="mailto:digitalengineeringtech.mm@gmail.com">
-                            digitalengineeringtech.mm@gmail.com
+                              {t("CONTACT.INFO.EMAIL")}
                           </a>
                         </td>
                       </tr>
@@ -619,7 +583,7 @@ const HomePage = () => {
                           <FaPhone className="my-auto w-full text-white text-[30px]" />
                         </td>
                         <td className="text-lg md:text-xl  text-white">
-                          <a href="tel:+959988340001">+959-988-34-0001</a>
+                          <a href="tel:+959988340001">{t("CONTACT.INFO.PH")}</a>
                         </td>
                       </tr>
                     </table>

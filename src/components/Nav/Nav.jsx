@@ -8,8 +8,10 @@ import "../../index.css";
 import { HiMenu } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import {LanguagePicker} from "../LanguagePicker.jsx";
+import { useTranslation } from 'react-i18next';
 
 const Nav = () => {
+  const { t, i18n } = useTranslation();
   const { scrollY } = useScroll();
   const [param, setParam] = useState();
   const current = scrollY.current;
@@ -17,7 +19,7 @@ const Nav = () => {
     {
       to: "home",
       id: 1,
-      name: "Home",
+      name: t('N_HOME'),
       link: "/#home",
       offset: 0,
       active: current < 400 ? "active" : "",
@@ -25,7 +27,7 @@ const Nav = () => {
     {
       to: "service",
       id: 2,
-      name: "Service",
+      name: t('N_SER'),
       link: "/#service",
       offset: -120,
       active: current > 400 && current < 1100 ? "active" : "",
@@ -33,7 +35,7 @@ const Nav = () => {
     {
       to: "product",
       id: 3,
-      name: "Product",
+      name: t('N_PRO'),
       link: "/#product",
       offset: -100,
       active: current > 1100 && current < 1800 ? "active" : "",
@@ -41,14 +43,14 @@ const Nav = () => {
     {
       to: "about",
       id: 4,
-      name: "About",
+      name: t('N_ABOUT'),
       link: "/#about",
       offset: -120,
       active: current > 1800 && current < 2200 ? "active" : "",
     },
     {
       to: "contact",
-      name: "Contact",
+      name: t('N_CONTACT'),
       link: "/#contact",
       offset: -180,
       active: current > 2200 ? "active" : "",

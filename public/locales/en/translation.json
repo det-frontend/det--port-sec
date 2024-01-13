@@ -42,5 +42,53 @@
         "delay": 0
       }
     ]
+  },
+  "PRODUCT": {
+    "TITLE": "Products that we provide",
+    "CARD": [
+      {
+        "id": 1,
+        "title": "Realtime Fuel Station Management System",
+        "subtitle":
+        "We provide state-of-the-art Realtime Fuel Station Management Systems that ensure seamless operations. Our system enables real-time monitoring of inventory, transactions, and pump activity. It features user-friendly interfaces, robust security measures, and automated alerts for maintenance and inventory management.",
+        "img": "../../../src/assets/fuelProduct.jpg"
+      }
+    ]
+
+  },
+  "ABOUT": {
+    "TITLE": "About Us",
+    "DESC": "Our company, initially named Digital Engineering Group, was established in December 2019 and later changed and registered to Digital Engineering Tech Ltd in November 2021. We offer a variety of services with a primary focus on IOT Engineering and other IT services. Throughout our journey, our company has achieved several significant milestones"
+  },
+  "CONTACT": {
+    "TITLE": "Contact Us",
+    "FORM": {
+      "F": "First Name",
+      "L": "Last Name",
+      "EMAIL": "Enter your email",
+      "TEXT": "Text ..."
+    },
+    "INFO": {
+      "TITLE": "Information",
+      "SUBTITLE": "Contact us and we'll get back to you within 24 hours.",
+      "ADD": "No.15/1921, 12th Street, Paung Laung 2 Wardz, Pyinmana, Naypyitaw",
+      "EMAIL": "digitalengineeringtech.mm@gmail.com",
+      "PH": "+959-988-34-0001"
+    }
+  },
+  "BTN": "LEARN MORE",
+  "LANGUAGE": "Language",
+  "N_HOME" : "Home",
+  "N_SER" : "Service",
+  "N_PRO" : "Product",
+  "N_ABOUT" : "About",
+  "N_CONTACT" : "Contact",
+  "QUOTE": {
+    "TITLE": {
+      "S1": "Everything in one App,"
+    },
+    "SUB": {
+
+    }
   }
 }

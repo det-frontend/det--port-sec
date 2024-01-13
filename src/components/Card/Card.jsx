@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {useTranslation} from "react-i18next";
 
 const Card = ({ title, subtitle, id, img, delay }) => {
+  const { t, i18n } = useTranslation();
+
   return (
     <motion.div
       whileHover={{
@@ -33,7 +36,7 @@ const Card = ({ title, subtitle, id, img, delay }) => {
         >
           Read More
         </div> */}
-        <button className="button-sm button border-red-300">Read more</button>
+        <button className="button-sm button border-red-300">{t("BTN")}</button>
       </div>
     </motion.div>
   );

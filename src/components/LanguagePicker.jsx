@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next';
 import mm from '../assets/myanmar.png'
 import us from '../assets/united-states.png'
 import logo from "../assets/detlogo.png";
@@ -28,7 +28,7 @@ export const LanguagePicker = () => {
             <button onClick={() => setVisible((pre)=>!pre)}>
                 <div className="flex gap-3 p-4 py-3 border border-text text-text rounded-lg">
                     <img src={i18n.language == "en"?us: mm} className="h-6" alt="err"/>
-                    Language
+                    {t('LANGUAGE')}
                 </div>
             </button>
             {visible &&<div className="absolute top-20 w-[150px] flex flex-col border border-text overflow-hidden rounded-md">
