@@ -7,6 +7,7 @@ import { useScroll } from "framer-motion";
 import "../../index.css";
 import { HiMenu } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
+import {LanguagePicker} from "../LanguagePicker.jsx";
 
 const Nav = () => {
   const { scrollY } = useScroll();
@@ -70,6 +71,8 @@ const Nav = () => {
       <div className=" h-[85px] bg-[#19072B20] backdrop-blur-lg shadow-2xl  flex justify-center">
         <div className="w-[80%] items-center flex justify-between px-3">
           <img src={logo} className="h-16 ms-[-50px]" alt="err" />
+          <div className="flex ">
+
           <div className="lg:flex items-center gap-3 hidden">
             {!(param == "/blog") &&
               navList.map((data) => (
@@ -84,6 +87,11 @@ const Nav = () => {
                 </a>
               ))}
           </div>
+            <div className="lg:flex hidden">
+            <LanguagePicker/>
+            </div>
+          </div>
+
           {/* menu  */}
           <div onClick={() => setChg(!chg)} className="lg:hidden ms-auto">
             {chg ? (
@@ -100,17 +108,20 @@ const Nav = () => {
           >
             <ul className="list-none lg:hidden grid grid-cols-2 gap-2 text-text justify-end text-center items-center flex-col">
               {navList.map((e) => (
-                <motion.a
-                  href={e.link}
-                  key={e.id}
-                  // whileHover={{ scale: 1.2 }}
-                  // key={e.id}
-                  className="hover:text-darkGreen text-2xl justify-center duration-75 items-center font-semibold flex p-6 font-poppins"
-                >
-                  {/* <div className="flex me-2 text-2xl">{e.icon}</div> */}
-                  {e.name}
-                </motion.a>
+                  <motion.a
+                      href={e.link}
+                      key={e.id}
+                      // whileHover={{ scale: 1.2 }}
+                      // key={e.id}
+                      className="hover:text-darkGreen text-2xl justify-center duration-75 items-center font-semibold flex p-6 font-poppins"
+                  >
+                    {/* <div className="flex me-2 text-2xl">{e.icon}</div> */}
+                    {e.name}
+                  </motion.a>
               ))}
+              <li className="lg:hidden ">
+                <LanguagePicker/>
+              </li>
               {/* <li> */}
               {/* <Link onClick={() => setParam("/blog")} to={"/blog"}> */}
               {/* <Link> */}

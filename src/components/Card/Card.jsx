@@ -33,7 +33,7 @@ const Card = ({ title, subtitle, id, img, delay }) => {
         >
           Read More
         </div> */}
-        <button className="button-sm border-red-300">Read more</button>
+        <button className="button-sm button border-red-300">Read more</button>
       </div>
     </motion.div>
   );

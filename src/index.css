@@ -99,14 +99,14 @@ section {
   outline: 2px solid #09be8c;
 }
 
-button:hover {
+.button:hover {
   color: #ffffff;
   transform: scale(1.1);
   outline: 2px solid #09be8c;
   box-shadow: 4px 5px 17px -4px #09be8c;
 }
 
-button::before {
+.button::before {
   content: "";
   position: absolute;
   left: -50px;
@@ -119,9 +119,11 @@ button::before {
   transition: width 700ms;
 }
 
-button:hover::before {
+.button:hover::before {
   width: 250%;
 }
+
+
 .button-sm {
   padding: 1em 2em;
   border: none;
