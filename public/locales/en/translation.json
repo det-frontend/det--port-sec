@@ -77,6 +77,7 @@
     }
   },
   "BTN": "LEARN MORE",
+  "A_BTN": "ABOUT US",
   "LANGUAGE": "Language",
   "N_HOME" : "Home",
   "N_SER" : "Service",
@@ -85,10 +86,14 @@
   "N_CONTACT" : "Contact",
   "QUOTE": {
     "TITLE": {
-      "S1": "Everything in one App,"
+      "S1": "Everything in one App",
+      "S2": "For Simple, Secure And Smart",
+      "S3": "Use Smart Devices"
     },
     "SUB": {
-
+      "S1": "Control Your Home With DET Products...",
+      "S2": "Use DET Products",
+      "S3": "To Become Smart Life"
     }
   }
 }

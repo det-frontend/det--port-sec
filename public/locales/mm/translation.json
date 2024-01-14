@@ -1,11 +1,11 @@
 
 {
   "HOME": {
-  "TITLE": "ကျွန်ုပ်တို့ကမ်းလှမ်းသောဝန်ဆောင်မှုများ",
-  "DESCRIPTION": {
-    "PART1": "To get started, edit <1>src/App.js</1> and save to reload.",
-    "PART2": "Switch language between english and german using buttons above."
-  }
+    "TITLE": "ကျွန်ုပ်တို့ကမ်းလှမ်းသောဝန်ဆောင်မှုများ",
+    "DESCRIPTION": {
+      "PART1": "To get started, edit <1>src/App.js</1> and save to reload.",
+      "PART2": "Switch language between english and german using buttons above."
+    }
   },
   "SERVICE": {
     "3_CARD": {
@@ -80,9 +80,22 @@
   },
   "LANGUAGE": "ဘာသာစကား",
   "BTN": "ပိုမိုသိရှိရန်",
+  "A_BTN": "ကျွန်ုပ်တို့အကြောင်း",
   "N_HOME" : "မူလ",
   "N_SER" : "ဝန်ဆောင်မှု",
   "N_PRO" : "ထုတ်ကုန်",
   "N_ABOUT" : "အကြောင်း",
-  "N_CONTACT" : "ဆက်သွယ်ရန်"
+  "N_CONTACT" : "ဆက်သွယ်ရန်",
+  "QUOTE": {
+    "TITLE": {
+      "S1": "အက်ပ်တစ်ခုတည်းတွင် အရာအားလုံး",
+      "S2": "ရိုးရှင်းသော၊ လုံခြုံပြီး စမတ်ကျရန်အတွက်",
+      "S3": "စမတ်ကိရိယာများကို အသုံးပြုပါ"
+    },
+    "SUB": {
+      "S1": "သင့်အိမ်ကို DET ထုတ်ကုန်များဖြင့် ထိန်းချုပ်ပါ...",
+      "S2": "DET ထုတ်ကုန်များကို အသုံးပြုပါ",
+      "S3": "စမတ်ကျသောဘဝဖြစ်လာရန်"
+    }
+  }
 }

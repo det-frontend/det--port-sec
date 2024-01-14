@@ -40,13 +40,12 @@ const HomePage = () => {
      let product =  i18n.language == "en"?(i18n.store.data.en.translation.PRODUCT.CARD):(i18n.store.data.mm.translation.PRODUCT.CARD)
 
 
-    console.log(data)
     return (
     <div className="circuitBg bg-cover ">
         <section className="" id="home">
             <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[390px]  md:h-[560px] xl:h-[660px] pb-10 bg-cover bg-top">
                 {/* <div className="  flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[730px] bg-cover bg-top"> */}
-                <div className="w-[90%] 3xl:w-[80%] xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">
+                <div className="w-[90%] 3xl:w-[75%] xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">
                     {/*<div className="w-[90%] bg-red-300 lg:ms-40 xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">*/}
                     <div className="flex mt-[50px]  pt-6 md:mt-0 lg:ms-8 w-full lg:w-[60%] h-[300px] flex-col items-start">
                         <motion.div
@@ -67,7 +66,7 @@ const HomePage = () => {
                                     () => {
                                         setTypingStatus("Typing...");
                                     },
-                                    "Everything in one App,",
+                                    "Everything in one App",
                                     () => {
                                         setTypingStatus("Done Typing");
                                     },
@@ -194,8 +193,8 @@ const HomePage = () => {
                 >
                   About us
                 </div> */}
-                            <a href="/#about">
-                                <button className="button button-wh ">About us</button>
+                            <a href="/#about" >
+                                <button className="button button-wh ">{t('A_BTN')}</button>
                             </a>
                         </motion.div>
                     </div>
@@ -257,7 +256,7 @@ const HomePage = () => {
               className="2xl:h-[250px] opacity-40 rotate-180 hidden lg:flex h-[200px] mt-auto mb-[-55px]"
             />
           </div>
-            <div className="w-[95%] xl:w-[90%] md:pt-5 mx-auto">
+            <div className="w-[95%] 3xl:w-[75%] xl:w-[90%] md:pt-5 mx-auto">
                 {/* <TypeAnimation
               sequence={[
                 1000,
@@ -568,13 +567,17 @@ const HomePage = () => {
                         <td className="text-lg lg:hidden md:text-xl  text-white">
                           {" "}
                           <a href="mailto:digitalengineeringtech.mm@gmail.com">
-                              {t("CONTACT.INFO.EMAIL")}
+                              {/*{t("CONTACT.INFO.EMAIL")}*/}
+                              digitalengineeringtech.
+                              mm@gmail.com
                           </a>
+
                         </td>
                         <td className="text-lg md:text-xl hidden lg:flex text-white">
                           {" "}
                           <a href="mailto:digitalengineeringtech.mm@gmail.com">
-                              {t("CONTACT.INFO.EMAIL")}
+                              {/*{t("CONTACT.INFO.EMAIL")}*/}
+                              digitalengineeringtech.mm@gmail.com
                           </a>
                         </td>
                       </tr>

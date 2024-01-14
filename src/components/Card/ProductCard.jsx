@@ -40,11 +40,11 @@ const ProductCard = ({ id, title, subtitle, img }) => {
               <img src={img} alt="err" className="w-full " />
             </div>
             <div className="flex flex-col pb-4">
-              <div className=" ms-5 mt-6">
-                <div className="text-[1.8rem] xl:text-[2.1rem] 2xl:text-[2.3rem] w-[95%] text-text leading-10 font-semibold">
+              <div className=" ms-5 mt-6 ">
+                <div className="text-[1.8rem] xl:text-[2.1rem] 2xl:text-[2.3rem] w-[75%] text-text leading-10 font-semibold">
                   {title}
                 </div>
-                <div className="text-lg w-[420px] xl:w-[450px] 2xl:w-[500px] mt-3 text-text/80">
+                <div className="text-lg w-[420px] xl:w-[450px] 2xl:w-[480px] mt-3 text-text/80">
                   {subtitle.slice(0, 270)}{" "}
                   <span className="text-text/30 ms-2">see more . . .</span>
                 </div>
