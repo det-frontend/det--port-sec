@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import Card from "../components/Card/Card";
-import service from "../content/service";
+// import service from "../content/service";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as Custom } from "https://cdn.jsdelivr.net/npm/swiper@11/swiper.min.mjs";
 import { TypeAnimation } from "react-type-animation";

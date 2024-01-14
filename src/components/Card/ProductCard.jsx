@@ -1,7 +1,7 @@
 import React from "react";
 import iot from "../../assets/iot.jpg";
 import { motion } from "framer-motion";
-import product from "../../content/product";
+// import product from "../../content/product";
 import "./product.css";
 import { useTranslation } from 'react-i18next';
 const ProductCard = ({ id, title, subtitle, img }) => {
