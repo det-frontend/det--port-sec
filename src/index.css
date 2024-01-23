@@ -123,7 +123,6 @@ section {
   width: 250%;
 }
 
-
 .button-sm {
   padding: 1em 2em;
   border: none;
@@ -225,4 +224,23 @@ button-wh:hover::before {
 .parallax span {
   display: block;
   margin-right: 30px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00feb5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #09be8c;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #151e2f;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

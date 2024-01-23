@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        '3xl': '1600px',
+        "3xl": "1600px",
       },
       colors: {
         primary: "#020E34",
@@ -14,6 +14,7 @@ export default {
         // secondary: "#113768",
         button: "#0598CE",
         text: "#00FEB5",
+        text2: "#00FEB5",
         bg: "#151E2F",
       },
       // colors: {
@@ -22,6 +23,13 @@ export default {
       //   button: "#2d598e",
       //   text: "#1B3352",
       // },
+      listStyleType: {
+        none: "none",
+        disc: "disc",
+        decimal: "decimal",
+        square: "square",
+        roman: "upper-roman",
+      },
     },
     fontFamily: {
       // 'sans': ['ui-sans-serif', 'system-ui'],

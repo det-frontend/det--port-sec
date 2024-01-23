@@ -9,10 +9,9 @@ import { PasswordInput, TextInput, Textarea } from "@mantine/core";
 import { FaLocationDot } from "react-icons/fa6";
 import left from "../assets/left.png";
 import right from "../assets/rightbutton.png";
-import { useNavigate } from "react-router";
 import coding from "../assets/coding.png";
 import design from "../assets/logo-design.png";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -28,164 +27,169 @@ import { Link, NavLink } from "react-router-dom";
 import ProductCard2 from "../components/Card/ProductCard2";
 import ServiceCard from "../components/Card/ServiceCard";
 import lamp from "../assets/lamp.png";
-import {LanguagePicker} from "../components/LanguagePicker.jsx";
+import { LanguagePicker } from "../components/LanguagePicker.jsx";
 
 const HomePage = () => {
-    const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [render, setRender] = useState(false);
   const { scrollY } = useScroll();
-  const [typingStatus, setTypingStatus] = useState("Initializing")
+  const [typingStatus, setTypingStatus] = useState("Initializing");
 
-     let data =  i18n.language == "en"?(i18n.store.data.en.translation.SERVICE.CARD):(i18n.store.data.mm.translation.SERVICE.CARD)
-     let product =  i18n.language == "en"?(i18n.store.data.en.translation.PRODUCT.CARD):(i18n.store.data.mm.translation.PRODUCT.CARD)
+  let data =
+    i18n.language == "en"
+      ? i18n.store.data.en.translation.SERVICE.CARD
+      : i18n.store.data.mm.translation.SERVICE.CARD;
+  let product =
+    i18n.language == "en"
+      ? i18n.store.data.en.translation.PRODUCT.CARD
+      : i18n.store.data.mm.translation.PRODUCT.CARD;
 
-
-    return (
+  return (
     <div className="circuitBg bg-cover ">
-        <section className="" id="home">
-            <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[390px]  md:h-[560px] xl:h-[660px] pb-10 bg-cover bg-top">
-                {/* <div className="  flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[730px] bg-cover bg-top"> */}
-                <div className="w-[90%] 3xl:w-[75%] xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">
-                    {/*<div className="w-[90%] bg-red-300 lg:ms-40 xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">*/}
-                    <div className="flex mt-[50px]  pt-6 md:mt-0 lg:ms-8 w-full lg:w-[60%] h-[300px] flex-col items-start">
-                        <motion.div
-                            viewport={{ once: true }}
-                            whileInView={{ opacity: 1, x: 1 }}
-                            initial={{ opacity: 0, x: "-100%" }}
-                            transition={{
-                                type: "spring",
-                                // stiffness: 50,
-                                // delay: 0.8,
-                                duration: 2,
-                            }}
-                            className="text-white  flex flex-col"
-                        >
-                            <TypeAnimation
-                                // cursor={false}
-                                sequence={[
-                                    () => {
-                                        setTypingStatus("Typing...");
-                                    },
-                                    "Everything in one App",
-                                    () => {
-                                        setTypingStatus("Done Typing");
-                                    },
-                                    6800,
-                                    () => {
-                                        setTypingStatus("Deleting...");
-                                    },
-                                    "",
-                                    () => {
-                                        setTypingStatus("Done Deleting");
-                                    },
-                                    () => {
-                                        setTypingStatus("Typing...");
-                                    },
-                                    "For Simple, Secure And Smart",
-                                    () => {
-                                        setTypingStatus("Done Typing");
-                                    },
-                                    5000,
-                                    () => {
-                                        setTypingStatus("Deleting...");
-                                    },
-                                    "",
-                                    () => {
-                                        setTypingStatus("Done Deleting");
-                                    },
-                                    () => {
-                                        setTypingStatus("Typing...");
-                                    },
-                                    "Use Smart Devices",
-                                    () => {
-                                        setTypingStatus("Done Typing");
-                                    },
-                                    5500,
-                                    () => {
-                                        setTypingStatus("Deleting...");
-                                    },
-                                    "",
-                                    () => {
-                                        setTypingStatus("Done Deleting");
-                                    },
-                                ]}
-                                speed={65}
-                                cursor={false}
-                                // style={{ fontSize: "3em" }}
-                                className="font-bold pt-10 h-20 md:text-[3em] text-2xl text-white"
-                                repeat={Infinity}
-                            />
-                            <TypeAnimation
-                                sequence={[
-                                    1500,
-                                    () => {
-                                        setTypingStatus("Typing...");
-                                    },
-                                    "Control Your Home With DET Products...",
-                                    () => {
-                                        setTypingStatus("Done Typing");
-                                    },
-                                    3500,
-                                    () => {
-                                        setTypingStatus("Deleting...");
-                                    },
-                                    "",
-                                    () => {
-                                        setTypingStatus("Done Deleting");
-                                    },
-                                    1900,
-                                    () => {
-                                        setTypingStatus("Typing...");
-                                    },
-                                    "Use DET Products",
-                                    () => {
-                                        setTypingStatus("Done Typing");
-                                    },
-                                    3900,
-                                    () => {
-                                        setTypingStatus("Deleting...");
-                                    },
-                                    "",
-                                    () => {
-                                        setTypingStatus("Done Deleting");
-                                    },
-                                    1500,
-                                    () => {
-                                        setTypingStatus("Typing...");
-                                    },
-                                    "To Become Smart Life",
-                                    () => {
-                                        setTypingStatus("Done Typing");
-                                    },
-                                    3800,
-                                    () => {
-                                        setTypingStatus("Deleting...");
-                                    },
-                                    "",
-                                    () => {
-                                        setTypingStatus("Done Deleting");
-                                    },
-                                ]}
-                                speed={65}
-                                cursor={false}
-                                style={{ fontSize: "1.7em" }}
-                                className="font-bold pt-2 h-20 md:pt-5 text-darkGreen"
-                                repeat={Infinity}
-                            />
-                        </motion.div>
-                        <motion.div
-                            viewport={{ once: true }}
-                            whileInView={{ opacity: 1, x: 1 }}
-                            initial={{ opacity: 0, x: "-100%" }}
-                            transition={{
-                                type: "spring",
-                                // stiffness: 50,
-                                // delay: 1,
-                                duration: 2,
-                            }}
-                            className="mt-5 "
-                        >
-                            {/* <div
+      <section className="" id="home">
+        <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[390px]  md:h-[560px] xl:h-[660px] pb-10 bg-cover bg-top">
+          {/* <div className="  flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[730px] bg-cover bg-top"> */}
+          <div className="w-[90%] 3xl:w-[75%] xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">
+            {/*<div className="w-[90%] bg-red-300 lg:ms-40 xl:mt-[30px] items-center 2xl:mt-[90px] flex justify-between">*/}
+            <div className="flex mt-[50px]  pt-6 md:mt-0 lg:ms-8 w-full lg:w-[60%] h-[300px] flex-col items-start">
+              <motion.div
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 1 }}
+                initial={{ opacity: 0, x: "-100%" }}
+                transition={{
+                  type: "spring",
+                  // stiffness: 50,
+                  // delay: 0.8,
+                  duration: 2,
+                }}
+                className="text-white  flex flex-col"
+              >
+                <TypeAnimation
+                  // cursor={false}
+                  sequence={[
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "Everything in one App",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    6800,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "For Simple, Secure And Smart",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    5000,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "Use Smart Devices",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    5500,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                  ]}
+                  speed={65}
+                  cursor={false}
+                  // style={{ fontSize: "3em" }}
+                  className="font-bold pt-10 h-20 md:text-[3em] text-2xl text-white"
+                  repeat={Infinity}
+                />
+                <TypeAnimation
+                  sequence={[
+                    1500,
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "Control Your Home With DET Products...",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    3500,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                    1900,
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "Use DET Products",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    3900,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                    1500,
+                    () => {
+                      setTypingStatus("Typing...");
+                    },
+                    "To Become Smart Life",
+                    () => {
+                      setTypingStatus("Done Typing");
+                    },
+                    3800,
+                    () => {
+                      setTypingStatus("Deleting...");
+                    },
+                    "",
+                    () => {
+                      setTypingStatus("Done Deleting");
+                    },
+                  ]}
+                  speed={65}
+                  cursor={false}
+                  style={{ fontSize: "1.7em" }}
+                  className="font-bold pt-2 h-20 md:pt-5 text-darkGreen"
+                  repeat={Infinity}
+                />
+              </motion.div>
+              <motion.div
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, x: 1 }}
+                initial={{ opacity: 0, x: "-100%" }}
+                transition={{
+                  type: "spring",
+                  // stiffness: 50,
+                  // delay: 1,
+                  duration: 2,
+                }}
+                className="mt-5 "
+              >
+                {/* <div
                   whileHover={{
                     scale: 1.1,
                   }}
@@ -193,54 +197,54 @@ const HomePage = () => {
                 >
                   About us
                 </div> */}
-                            <a href="/#about" >
-                                <button className="button button-wh ">{t('A_BTN')}</button>
-                            </a>
-                        </motion.div>
-                    </div>
-                    {/* lottie */}
-                    <motion.div
-                        viewport={{ once: true }}
-                        whileInView={{ opacity: 1, x: 1 }}
-                        initial={{ opacity: 0, x: "100%" }}
-                        transition={{
-                            type: "spring",
-                            // stiffness: 30,
-                            // delay: 1.2,
-                            duration: 2,
-                        }}
-                        className=" ms-[-200px]  w-[50%] "
-                    >
-                        <div className="xl:flex hidden">
-                            <lottie-player
-                                src="https://lottie.host/c2501c80-a1ae-4410-b609-371f97519054/6rX8wwTPN9.json"
-                                background="transparent"
-                                speed="1"
-                                style={{
-                                    width: "600px",
-                                    height: "600px",
-                                    marginLeft: 'auto'
-                                    // marginTop: "-170px",
-                                    // marginRight: "-50px",
-                                }}
-                                direction="1"
-                                mode="normal"
-                                loop
-                                autoplay
-                                className=""
-                            ></lottie-player>
-                        </div>
-                    </motion.div>
-                </div>
+                <a href="/#about">
+                  <button className="button button-wh ">{t("A_BTN")}</button>
+                </a>
+              </motion.div>
             </div>
-        </section>
+            {/* lottie */}
+            <motion.div
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, x: 1 }}
+              initial={{ opacity: 0, x: "100%" }}
+              transition={{
+                type: "spring",
+                // stiffness: 30,
+                // delay: 1.2,
+                duration: 2,
+              }}
+              className=" ms-[-200px]  w-[50%] "
+            >
+              <div className="xl:flex hidden">
+                <lottie-player
+                  src="https://lottie.host/c2501c80-a1ae-4410-b609-371f97519054/6rX8wwTPN9.json"
+                  background="transparent"
+                  speed="1"
+                  style={{
+                    width: "600px",
+                    height: "600px",
+                    marginLeft: "auto",
+                    // marginTop: "-170px",
+                    // marginRight: "-50px",
+                  }}
+                  direction="1"
+                  mode="normal"
+                  loop
+                  autoplay
+                  className=""
+                ></lottie-player>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       <section id="service">
         <div className="  bg-[#151E2F] beeBg pt-8 md:pt-12 bg-cover ">
           {" "}
           <div className="mt-[-90px] lg:mt-[-125px] w-full gap-2 md:gap-10 flex justify-center">
-            <ServiceCard img={lamp} text={t('SERVICE.3_CARD.INNO')} />
-            <ServiceCard img={design} text={t('SERVICE.3_CARD.DESIGN')}/>
-            <ServiceCard img={coding} text={t('SERVICE.3_CARD.DEV')} />
+            <ServiceCard img={lamp} text={t("SERVICE.3_CARD.INNO")} />
+            <ServiceCard img={design} text={t("SERVICE.3_CARD.DESIGN")} />
+            <ServiceCard img={coding} text={t("SERVICE.3_CARD.DEV")} />
           </div>
           <div className=" mt-[-80px] absolute">
             <img
@@ -256,8 +260,8 @@ const HomePage = () => {
               className="2xl:h-[250px] opacity-40 rotate-180 hidden lg:flex h-[200px] mt-auto mb-[-55px]"
             />
           </div>
-            <div className="w-[95%] 3xl:w-[75%] xl:w-[90%] md:pt-5 mx-auto">
-                {/* <TypeAnimation
+          <div className="w-[95%] 3xl:w-[75%] xl:w-[90%] md:pt-5 mx-auto">
+            {/* <TypeAnimation
               sequence={[
                 1000,
                 () => {
@@ -282,81 +286,81 @@ const HomePage = () => {
               className="font-bold md:pt-10 text-[1.5rem] md:text-[2.3rem]  md:ms-11 text-darkGreen"
               repeat={Infinity}
             /> */}
-                <motion.div
-                    viewport={{once: true}}
-                    whileInView={{opacity: 1, y: 1}}
-                    initial={{opacity: 0, y: "100%"}}
-                    transition={{
-                        // stiffness: 400,
-                        // delay: e.delay,
-                        duration: 0.8,
-                    }}
-                    className="font-bold md:pt-10 pt-9 mx-auto flex text-center justify-center text-[1.8rem] md:text-[2.3rem] text-darkGreen"
-                >
-                    {t('HOME.TITLE')}
-                </motion.div>
+            <motion.div
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 1 }}
+              initial={{ opacity: 0, y: "100%" }}
+              transition={{
+                // stiffness: 400,
+                // delay: e.delay,
+                duration: 0.8,
+              }}
+              className="font-bold md:pt-10 pt-9 mx-auto flex text-center justify-center text-[1.8rem] md:text-[2.3rem] text-darkGreen"
+            >
+              {t("HOME.TITLE")}
+            </motion.div>
 
-                <div className="md:mt-2 flex pb-3 md:pb-12 items-center">
-                    <Swiper
-                        slidesPerView={1}
-                        // spaceBetween={10}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        breakpoints={{
-                            "@0.00": {
-                                slidesPerView: 1,
-                                spaceBetween: 10,
-                            },
-                            "@0.75": {
-                                slidesPerView: 1,
-                                spaceBetween: 20,
-                            },
-                            "@1.00": {
-                                slidesPerView: 2,
-                                spaceBetween: 40,
-                            },
-                            "@1.50": {
-                                slidesPerView: 3,
-                                spaceBetween: 50,
-                            },
-                        }}
-                        // modules={[Pagination]}
-                        // cssMode={true}
-                        navigation={true}
-                        // pagination={true}
-                        // mousewheel={true}
-                        keyboard={true}
-                        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                        className="mySwiper h-[500px] md:h-[535px]"
+            <div className="md:mt-2 flex pb-3 md:pb-12 items-center">
+              <Swiper
+                slidesPerView={1}
+                // spaceBetween={10}
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  "@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  "@0.75": {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  "@1.00": {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  "@1.50": {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                }}
+                // modules={[Pagination]}
+                // cssMode={true}
+                navigation={true}
+                // pagination={true}
+                // mousewheel={true}
+                keyboard={true}
+                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                className="mySwiper h-[500px] md:h-[535px]"
+              >
+                {data.map((e) => (
+                  <SwiperSlide className="pt-12 md:pt-16">
+                    {/* <div className="" ref={ref}> */}
+                    <motion.div
+                      viewport={{ once: true, margin: "250px" }}
+                      whileInView={{ opacity: 1, y: 1 }}
+                      initial={{ opacity: 0, y: "100%" }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 40,
+                        delay: e.delay,
+                        duration: 2,
+                      }}
+                      className="flex justify-center"
                     >
-                        {data.map((e) => (
-                            <SwiperSlide className="pt-12 md:pt-16">
-                                {/* <div className="" ref={ref}> */}
-                                <motion.div
-                                    viewport={{once: true, margin: "250px"}}
-                                    whileInView={{opacity: 1, y: 1}}
-                                    initial={{opacity: 0, y: "100%"}}
-                                    transition={{
-                                        type: "spring",
-                                        stiffness: 40,
-                                        delay: e.delay,
-                                        duration: 2,
-                                    }}
-                                    className="flex justify-center"
-                                >
-                                    <Card id={e.id} {...e} />
-                                </motion.div>
-                                {/* </div> */}
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
+                      <Card id={e.id} {...e} />
+                    </motion.div>
+                    {/* </div> */}
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
-            {/* <div className="p-5" onClick={()=>Navigation.}>next</div> */}
+          </div>
+          {/* <div className="p-5" onClick={()=>Navigation.}>next</div> */}
         </div>
       </section>
-        <section id="product">
+      <section id="product">
         <div className=" flex-col items-center flex justify-center pb-5 md:pb-14 md:pt-7">
           <div className="w-[90%] mt-5 mx-auto">
             <motion.div
@@ -371,7 +375,7 @@ const HomePage = () => {
               className=" flex justify-center text-center"
             >
               <div className="font-bold mx-auto flex text-center justify-center text-[1.7rem] md:text-[2.8rem] text-white">
-                  {t("PRODUCT.TITLE")}
+                {t("PRODUCT.TITLE")}
               </div>
             </motion.div>
 
@@ -410,7 +414,7 @@ const HomePage = () => {
               }}
               className="text-text font-semibold text-[1.9rem] md:text-[2.5rem] mb-3 text-center"
             >
-                {t('ABOUT.TITLE')}
+              {t("ABOUT.TITLE")}
             </motion.div>
             <div className="flex flex-col items-center gap-1">
               {/* <motion.div
@@ -437,7 +441,7 @@ const HomePage = () => {
                 }}
                 className="w-[100%] havig md:text-2xl text-xl  text-center text-text/80"
               >
-                  {t("ABOUT.DESC")}
+                {t("ABOUT.DESC")}
               </motion.div>
               {/* <motion.div
                 viewport={{ once: true }}
@@ -452,19 +456,22 @@ const HomePage = () => {
               >
                 Use DET Products
               </motion.div> */}
-              <motion.div
-                viewport={{ once: true }}
-                whileInView={{ opacity: 1, y: 1 }}
-                initial={{ opacity: 0, y: "-100%" }}
-                transition={{
-                  // stiffness: 400,
-                  delay: 0.4,
-                  duration: 0.8,
-                }}
-                className="mb-4"
-              >
-                <button className="button mt-5">{t("BTN")}</button>
-              </motion.div>
+              <Link to={"/aboutDetails"}>
+                <motion.div
+                  // onClick={() => window.location.reload()}
+                  viewport={{ once: true }}
+                  whileInView={{ opacity: 1, y: 1 }}
+                  initial={{ opacity: 0, y: "-100%" }}
+                  transition={{
+                    // stiffness: 400,
+                    delay: 0.4,
+                    duration: 0.8,
+                  }}
+                  className="mb-4"
+                >
+                  <button className="button mt-5">{t("BTN")}</button>
+                </motion.div>
+              </Link>
             </div>
           </div>
           <img
@@ -478,7 +485,7 @@ const HomePage = () => {
         <div className="pb-20 pt-5">
           <div className="mt-10 w-full overflow-hidden">
             <div className="text-white font-bold text-[3rem] text-center">
-                {t("CONTACT.TITLE")}
+              {t("CONTACT.TITLE")}
             </div>
             <div className=" flex   justify-center">
               <motion.div
@@ -528,7 +535,7 @@ const HomePage = () => {
                     placeholder={t("CONTACT.FORM.TEXT")}
                     minRows={5}
                   />
-                  <div className=" me-8 justify-center  text-xl font-semibold hover:bg-transparent duration-100 hover:border-darkGreen hover:text-white border-[3px] w-full border-div px-4 py-2 flex rounded-md text-white">
+                  <div className=" me-8 justify-center  text-xl font-semibold hover:bg-transparent duration-100 hover:border-darkGreen hover:text-white border-[3px] w-full border-div px-4 py-2 flex rounded-md text-white select-none cursor-pointer">
                     Submit
                   </div>
                 </motion.div>
@@ -545,10 +552,10 @@ const HomePage = () => {
                   className="bg-darkBg/10 border-2 border-darkGreen p-7 backdrop-blur-md shadow-lg shadow-darkBg/10 rounded-lg mx-auto my-5  lg:m-0 w-[90%] md:w-[70%] lg:w-[45%]"
                 >
                   <div className="text-2xl text-white font-semibold">
-                      {t("CONTACT.INFO.TITLE")}
+                    {t("CONTACT.INFO.TITLE")}
                   </div>
                   <div className="text-lg font-semibold text-white ">
-                      {t("CONTACT.INFO.SUBTITLE")}
+                    {t("CONTACT.INFO.SUBTITLE")}
                   </div>
                   <div className="flex flex-col mt-3 items-start gap-2">
                     <table cellPadding={10}>
@@ -557,7 +564,7 @@ const HomePage = () => {
                           <FaLocationDot className=" my-auto w-full text-white text-[20px]" />
                         </td>
                         <td className="text-lg md:text-xl  text-white">
-                            {t("CONTACT.INFO.ADD")}
+                          {t("CONTACT.INFO.ADD")}
                         </td>
                       </tr>
                       <tr>
@@ -567,17 +574,15 @@ const HomePage = () => {
                         <td className="text-lg lg:hidden md:text-xl  text-white">
                           {" "}
                           <a href="mailto:digitalengineeringtech.mm@gmail.com">
-                              {/*{t("CONTACT.INFO.EMAIL")}*/}
-                              digitalengineeringtech.
-                              mm@gmail.com
+                            {/*{t("CONTACT.INFO.EMAIL")}*/}
+                            digitalengineeringtech. mm@gmail.com
                           </a>
-
                         </td>
                         <td className="text-lg md:text-xl hidden lg:flex text-white">
                           {" "}
                           <a href="mailto:digitalengineeringtech.mm@gmail.com">
-                              {/*{t("CONTACT.INFO.EMAIL")}*/}
-                              digitalengineeringtech.mm@gmail.com
+                            {/*{t("CONTACT.INFO.EMAIL")}*/}
+                            digitalengineeringtech.mm@gmail.com
                           </a>
                         </td>
                       </tr>
