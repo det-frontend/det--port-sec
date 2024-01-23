@@ -96,7 +96,7 @@ const Nav = () => {
                 ))}
               <Link to={"/"}>
                 {window.location.pathname == "/aboutDetails" && (
-                  <div className=" hover:border-2 hover:border-text text-white bg-text font-bold hover:bg-transparent hover:text-text duration-2000 p-5 text-lg py-2 rounded-md active:scale-105">
+                  <div className=" hover:border-2 duration-150 hover:border-text text-white bg-text/80 font-bold hover:bg-transparent hover:text-text duration-2000 p-5 text-lg py-2 rounded-md active:scale-105">
                     HOME
                   </div>
                 )}
@@ -118,7 +118,7 @@ const Nav = () => {
           {/* {chg && !show ? ( */}
           <div
             className={`w-[90%] mx-auto lg:hidden  ${
-              chg ? "opacity-100 translate-y-[350px]" : "opacity-0"
+              chg ? "opacity-100 translate-y-[380px]" : "opacity-0"
             } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-[#151E2F] border border-text fixed`}
           >
             <ul className="list-none lg:hidden grid grid-cols-2 gap-2 text-text justify-end text-center items-center flex-col">
@@ -147,6 +147,13 @@ const Nav = () => {
               {/* </Link> */}
               {/* </li> */}
             </ul>
+            <Link to={"/"}>
+              {window.location.pathname == "/aboutDetails" && (
+                <div className=" hover:border-2 duration-150 hover:border-text border-text border-2 text-white bg-text/80 font-bold hover:bg-transparent hover:text-text duration-2000 p-5 text-lg py-2 text-center rounded-md mt-3 active:scale-105">
+                  HOME
+                </div>
+              )}
+            </Link>
           </div>
           {/* menu end  */}
         </div>

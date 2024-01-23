@@ -28,8 +28,15 @@ import ProductCard2 from "../components/Card/ProductCard2";
 import ServiceCard from "../components/Card/ServiceCard";
 import lamp from "../assets/lamp.png";
 import { LanguagePicker } from "../components/LanguagePicker.jsx";
+import { useLocation } from "react-router-dom";
 
 const HomePage = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   const { t, i18n } = useTranslation();
   const [render, setRender] = useState(false);
   const { scrollY } = useScroll();
