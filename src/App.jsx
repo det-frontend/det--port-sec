@@ -7,9 +7,11 @@ import { MantineProvider } from "@mantine/core";
 import BlogPage from "./Pages/BlogPage";
 import AboutDetails from "./Pages/AboutDetails";
 import ThemeContext from "./services/context";
+import nav from "./services/nav";
 
 const App = () => {
   const [state, setState] = useState(false);
+  const [chg, setChg] = useState(false);
   // const ThemeContext = createContext();
   const router = createBrowserRouter([
     {
@@ -34,9 +36,11 @@ const App = () => {
   return (
     <>
       <ThemeContext.Provider value={{ state, setState }}>
-        <MantineProvider>
-          <RouterProvider router={router} />
-        </MantineProvider>
+        <nav.Provider value={{ chg, setChg }}>
+          <MantineProvider>
+            <RouterProvider router={router} />
+          </MantineProvider>
+        </nav.Provider>
       </ThemeContext.Provider>
     </>
   );
