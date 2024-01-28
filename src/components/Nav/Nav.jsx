@@ -150,7 +150,7 @@ const Nav = () => {
           {/* other  */}
           {window.location.pathname != "/aboutDetails" && (
             <div
-              className={`w-[90%] mx-auto lg:hidden  ${
+              className={`w-[93%] mx-auto lg:hidden  ${
                 chg ? "opacity-100 translate-y-[340px]" : "opacity-0"
               } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-[#151E2F] border border-text fixed`}
             >
@@ -162,7 +162,7 @@ const Nav = () => {
                     key={e.id}
                     // whileHover={{ scale: 1.2 }}
                     // key={e.id}
-                    className="hover:text-darkGreen text-2xl justify-center duration-75 items-center font-semibold flex p-6 font-poppins"
+                    className="hover:text-darkGreen text-xl justify-center duration-75 items-center font-semibold flex p-6 font-poppins"
                   >
                     {/* <div className="flex me-2 text-2xl">{e.icon}</div> */}
                     {e.name}
