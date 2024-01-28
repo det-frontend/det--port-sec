@@ -23,7 +23,7 @@ const AboutDetails = () => {
         <div className=" heroBg flex items-center overflow-hidden justify-center w-full h-[600px]  md:h-[520px] xl:h-[600px] md:pb-14 bg-cover bg-top">
           {/* <div className="  flex items-center overflow-hidden justify-center w-full h-[350px]  md:h-[560px] xl:h-[730px] bg-cover bg-top"> */}
           <div className="border border-text/20 bg-[#19072B20] backdrop-blur-lg text-gray-200 w-[80%] 3xl:w-[75%] xl:mt-[30px] flex-col gap-3 justify-center items-center py-10 rounded-xl   2xl:mt-[90px] flex">
-            <div className="text-center flex justify-center items-center text-2xl mb-3 md:text-3xl xl:text-5xl font-semibold xl:font-bold">
+            <div className="text-center w-[90%] flex justify-center items-center text-2xl mb-3 md:text-3xl xl:text-5xl font-semibold xl:font-bold">
               {t("HEAD.TITLE")}
             </div>
             <div className="text-center w-[90%] text-lg md:text-xl leading-7 md:leading-8 xl:leading-10 xl:text-2xl">
