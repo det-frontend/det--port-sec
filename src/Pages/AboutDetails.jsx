@@ -58,12 +58,12 @@ const AboutDetails = () => {
           <div className="w-[95%] 3xl:w-[75%] xl:w-[90%]  mx-auto pb-20 pt-5">
             <div className=" w-full">
               <div className=" w-[90%] text-gray-200 mx-auto  rounded-lg mt-6 md:mt-16">
-                <h3 className=" text-center mb-3 md:mb-5 xl:mb-[3rem] text-2xl md:text-3xl xl:text-5xl font-semibold xl:font-bold">
+                {/* <h3 className=" text-center mb-3 md:mb-5 xl:mb-[3rem] text-2xl md:text-3xl xl:text-5xl font-semibold xl:font-bold">
                   {t("HEAD.TITLE")}
                 </h3>
                 <span className=" text-justify text-lg md:text-xl leading-7 md:leading-8 xl:leading-10 xl:text-2xl">
                   {t("HEAD.SPAN")}
-                </span>
+                </span> */}
                 <p className=" mt-3 md:mt-5 xl:mt-[2rem] text-xl md:text-2xl font-semibold xl:text-3xl xl:font-bold">
                   {t("HEAD.SUB_TITLE")}
                 </p>

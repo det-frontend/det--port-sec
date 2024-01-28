@@ -22,7 +22,7 @@
       },
       {
         "id": 2,
-        "title": "IOT Service",
+        "title": "IoT Service",
         "subtitle": "We provide IoT solutions and technologies for facilities that need to be communicated between devices and cloud, as well as between the devices themselves.",
         "img": "../../static/images/iotservice.jpg",
         "delay": 0.2
@@ -56,7 +56,7 @@
   },
   "ABOUT": {
     "TITLE": "About Us",
-    "DESC": "Our company, initially named Digital Engineering Group, was established in December 2019 and later changed and registered to Digital Engineering Tech Ltd in November 2021. We offer a variety of services with a primary focus on IOT Engineering and other IT services. Throughout our journey, our company has achieved several significant milestones"
+    "DESC": "Our company, initially named Digital Engineering Group, was established in December 2019 and later changed and registered to Digital Engineering Tech Ltd in November 2021. We offer a variety of services with a primary focus on IoT Engineering and other IT services. Throughout our journey, our company has achieved several significant milestones"
   },
   "CONTACT": {
     "TITLE": "Contact Us",
@@ -96,7 +96,7 @@
   },
   "HEAD": {
     "TITLE": "About Our Company Journey History",
-    "SPAN": "Our company, initially named Digital Engineering Group, was established in December 2019 and later changed and registered to Digital Engineering Tech Ltd in November 2021.We offer a variety of services with a primary focus on IOT Engineering and other IT services.",
+    "SPAN": "Our company, initially named Digital Engineering Group, was established in December 2019 and later changed and registered to Digital Engineering Tech Ltd in November 2021.We offer a variety of services with a primary focus on IoT Engineering and other IT services.",
     "SUB_TITLE": "Throughout our journey, our company has achieved several significant milestones which are",
     "M_1": "In January 2020, we released the “Laser Light Security Alert system” with cloud-based alert",
     "M_2": "During the COVID-19 pandemic, we developed and released the “Automatic Hand Wash” system, which was donated to necessary areas.",
@@ -107,7 +107,7 @@
   "OUR_VISION": {
     "TITLE": "Our Vision",
     "OV_V1": "To create a future where luxury products are seamlessly integrated into people's lives, providing the most comfortable and innovative solutions for humankind.",
-    "OV_V2": "To develop our IOT Engineering Sector and capabilities day by day, with a focus on innovation and excellence.",
+    "OV_V2": "To develop our IoT Engineering Sector and capabilities day by day, with a focus on innovation and excellence.",
     "OV_V3": "To support the development of not only urban and industrial areas but also rural areas."
   },
   "OUR_MISSION": {
@@ -145,19 +145,19 @@
     "SPAN_2": "With just one controller, users can manage all the equipment in their entire room, including their television, air conditioner, and sockets, etc."
   },
   "IOT_SERVICE": {
-    "TITLE": "Other IOT Services"
+    "TITLE": "Other IoT Services"
   },
   "IOT_S_1": {
     "TITLE": "Consulting",
-    "SPAN": "Our IOT consulting services provide companies with the opportunity to leverage cutting-edge technology and unlock unique functionalities to drive their business growth. By collaborating with us, organizations can expect tailored solutions and expert guidance on the most effective implementation methods for their specific needs."
+    "SPAN": "Our IoT consulting services provide companies with the opportunity to leverage cutting-edge technology and unlock unique functionalities to drive their business growth. By collaborating with us, organizations can expect tailored solutions and expert guidance on the most effective implementation methods for their specific needs."
   },
   "IOT_S_2": {
-    "TITLE": " Launching IOT Solution",
+    "TITLE": " Launching IoT Solution",
     "SPAN": "We will support the primary requirements of organizations and companies that partner with us, and simplify their work process for greater ease and comfort. This will be accomplished through the development of essential hardware and software solutions, as well as the implementation of a cloud-based system for device and technology mapping."
   },
   "IOT_S_3": {
     "TITLE": "Conducting Development",
-    "SPAN": "Our collaborative partners can expect us to develop user-friendly software and applications that seamlessly integrate with IOT devices, cloud platforms, and mobile devices."
+    "SPAN": "Our collaborative partners can expect us to develop user-friendly software and applications that seamlessly integrate with IoT devices, cloud platforms, and mobile devices."
   },
   "IOT_S_4": {
     "TITLE": " Providing Security Services",
@@ -175,7 +175,7 @@
     "TITLE": " Developing  Long-Term Strategy",
     "SPAN": "Our partnering organizations will benefit from the integration of IoT technology in their long-term plans, enabling their workplaces to achieve higher technological standards at reduced costs, thus increasing the efficiency and reliability of their business operations.",
     "SPAN_2": "To sum up, our company caters specifically to entrepreneurs by carefully examining the requirements of each organization and offering our services that are truly essential,while engaging in thorough discussions and making appropriate recommendations.",
-    "SPAN_3": "Please note that we do not offer IOT security services or services provided by third parties for equipment, projects, or services obtained from other companies.",
+    "SPAN_3": "Please note that we do not offer IoT security services or services provided by third parties for equipment, projects, or services obtained from other companies.",
     "SPAN_4": " However, we do provide full services for our own products and projects, exclusively for equipment."
   },
   "OTHER_IT_S": {
@@ -187,12 +187,12 @@
     "IT_S_T_5": "Server Maintenance Services"
   },
   "BENEFITS_IOT": {
-    "TITLE": "Benefits of Using IOT Devices & Services for Your Business A Message to Our Clients",
-    "SPAN": "We would like to take this opportunity to share with you some of the benefits of incorporating IOT devices and services into your business operations.IOT devices and services with their advanced technology and connectivity, have the potential to revolutionize the way businesses operate. By utilizing IOT devices and services you can:",
-    "B_1": "Improve efficiency: IOT devices can automate several tasks, reducing the time and effort required to perform them manually. This results in increased productivity and efficiency in your business operations.",
-    "B_2": "Enhance safety: With the ability to collect real-time data, IOT devices can help you identify potential hazards and take timely action to prevent accidents and injuries.",
-    "B_3": "Reduce costs: IOT devices can help you save on energy consumption, reduce maintenance costs, and minimize downtime due to equipment failure, leading to significant cost savings.",
-    "B_4": "Provide better customer service: By collecting and analyzing data on customer preferences and behavior, IOT devices can help you tailor your services to meet their needs and expectations.",
+    "TITLE": "Benefits of Using IoT Devices & Services for Your Business A Message to Our Clients",
+    "SPAN": "We would like to take this opportunity to share with you some of the benefits of incorporating IoT devices and services into your business operations.IOT devices and services with their advanced technology and connectivity, have the potential to revolutionize the way businesses operate. By utilizing IOT devices and services you can:",
+    "B_1": "Improve efficiency: IoT devices can automate several tasks, reducing the time and effort required to perform them manually. This results in increased productivity and efficiency in your business operations.",
+    "B_2": "Enhance safety: With the ability to collect real-time data, IoT devices can help you identify potential hazards and take timely action to prevent accidents and injuries.",
+    "B_3": "Reduce costs: IoT devices can help you save on energy consumption, reduce maintenance costs, and minimize downtime due to equipment failure, leading to significant cost savings.",
+    "B_4": "Provide better customer service: By collecting and analyzing data on customer preferences and behavior, IoT devices can help you tailor your services to meet their needs and expectations.",
     "SPAN_2": "By using our services, organizations and companies not only differentiate themselves from their competitors, but also gain access to a wide range of innovative solutions and modern advancements, enabling them to stand out proudly."
   },
   "TO_INVEST": {
@@ -207,7 +207,7 @@
     "SPAN3_LI2": "You can expand your market and grow your business further.",
     "SPAN3_LI3": "You can access and work with a group of talented young professionals who prioritize quality and technology.",
     "SPAN3_LI4": "You can establish a good reputation in the industry and maintain it.",
-    "SPAN3_LI5": "You can stay up-to-date with the latest trends in IOT services and become a leader in the field.",
+    "SPAN3_LI5": "You can stay up-to-date with the latest trends in IoT services and become a leader in the field.",
     "SPAN_4": "Additionally, you can enjoy invaluable benefits that will elevate your standard of living and allow you to experience the true essence of technology.",
     "SPAN_5": "We believe that our company is the most appropriate and accurate choice for you. With a forward-looking vision, we are confident that investing with us will be beneficial and lead to wise decision-making as an investor with an eye towards the future.",
     "SPAN_6": "We cordially invite you to join 'Digital Engineering Tech Ltd' and take advantage of the opportunities available before they pass you by. Don't hesitate to invest now and secure your financial future.",
