@@ -25,11 +25,11 @@
 
 @media screen and (max-width: 800px) {
   .card {
-    width: 135px;
+    width: 120px;
     height: 100px;
   }
   .card2 {
-    width: 135px;
+    width: 120px;
     height: 100px;
   }
 }
