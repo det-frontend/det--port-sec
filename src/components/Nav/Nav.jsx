@@ -73,7 +73,7 @@ const Nav = () => {
     },
   ];
   // const [chg, setChg] = useState(false);
-
+  console.log(window.location.pathname, "..................");
   return (
     <motion.div
       viewport={{ once: true }}
@@ -91,7 +91,7 @@ const Nav = () => {
           <img src={logo} className="h-16 ms-[-50px]" alt="err" />
           <div className="flex ">
             <div className="lg:flex items-center gap-3 hidden">
-              {!(param == "/blog") &&
+              {!(window.location.pathname == "/blog") &&
                 !(window.location.pathname == "/aboutDetails") &&
                 navList.map((data) => (
                   // console.log(data.active),
@@ -115,6 +115,23 @@ const Nav = () => {
             <div className="lg:flex hidden">
               <LanguagePicker />
             </div>
+            {window.location.pathname === "/blog" ? (
+              <Link onClick={() => setParam("/")} to={"/"}>
+                {/* <Link> */}
+                {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
+                  Home
+                </div> */}
+                <button className="button ms-4">Home</button>
+              </Link>
+            ) : (
+              <Link onClick={() => setParam("/blog")} to={"/blog"}>
+                {/* <Link> */}
+                {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
+                  Blog
+                </div> */}
+                <button className="button ms-4">Blog</button>
+              </Link>
+            )}
           </div>
 
           {/* menu  */}
@@ -171,15 +188,15 @@ const Nav = () => {
                 <li className="lg:hidden ">
                   <LanguagePicker />
                 </li>
-                {/* <li> */}
-                {/* <Link onClick={() => setParam("/blog")} to={"/blog"}> */}
-                {/* <Link> */}
-                {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
-                  Blog
-                </div> */}
-                {/* <button className="button">Blog</button> */}
-                {/* </Link> */}
-                {/* </li> */}
+                <li>
+                  <Link onClick={() => setParam("/blog")} to={"/blog"}>
+                    {/* <Link> */}
+                    <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
+                      Blog
+                    </div>
+                    <button className="button">Blog</button>
+                  </Link>
+                </li>
               </ul>
             </div>
           )}
