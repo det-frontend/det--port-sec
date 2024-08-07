@@ -115,23 +115,23 @@ const Nav = () => {
             <div className="lg:flex hidden">
               <LanguagePicker />
             </div>
-            {window.location.pathname === "/blog" ? (
-              <Link onClick={() => setParam("/")} to={"/"}>
+            {/* {window.location.pathname === "/blog" ? ( */}
+              {/* // <Link onClick={() => setParam("/")} to={"/"}> */}
                 {/* <Link> */}
                 {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
                   Home
                 </div> */}
-                <button className="button ms-4">Home</button>
-              </Link>
-            ) : (
-              <Link onClick={() => setParam("/blog")} to={"/blog"}>
+                {/* <button className="button ms-4">Home</button> */}
+              {/* </Link> */}
+            {/* // ) : ( */}
+              {/* // <Link onClick={() => setParam("/blog")} to={"/blog"}> */}
                 {/* <Link> */}
                 {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
                   Blog
                 </div> */}
-                <button className="button ms-4">Blog</button>
-              </Link>
-            )}
+                {/* <button className="button ms-4">Blog</button> */}
+              {/* </Link> */}
+            {/* // )} */}
           </div>
 
           {/* menu  */}
