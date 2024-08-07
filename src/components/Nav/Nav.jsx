@@ -91,7 +91,7 @@ const Nav = () => {
           <img src={logo} className="h-16 ms-[-50px]" alt="err" />
           <div className="flex ">
             <div className="lg:flex items-center gap-3 hidden">
-              {!(window.location.pathname == "/blog") &&
+              {/* {!(window.location.pathname == "/blog") &&
                 !(window.location.pathname == "/aboutDetails") &&
                 navList.map((data) => (
                   // console.log(data.active),
@@ -103,7 +103,7 @@ const Nav = () => {
                       {...data}
                     />
                   </a>
-                ))}
+                ))} */}
               <Link to={"/"}>
                 {window.location.pathname == "/aboutDetails" && (
                   <div className=" hover:border-2 duration-150 hover:border-text text-white bg-text/80 font-bold hover:bg-transparent hover:text-text duration-2000 p-5 text-lg py-2 rounded-md active:scale-105">
@@ -115,23 +115,23 @@ const Nav = () => {
             <div className="lg:flex hidden">
               <LanguagePicker />
             </div>
-            {window.location.pathname === "/blog" ? (
-              <Link onClick={() => setParam("/")} to={"/"}>
+            {/* {window.location.pathname === "/blog" ? ( */}
+              {/* <Link onClick={() => setParam("/")} to={"/"}> */}
                 {/* <Link> */}
                 {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
                   Home
                 </div> */}
-                <button className="button ms-4">Home</button>
-              </Link>
-            ) : (
-              <Link onClick={() => setParam("/blog")} to={"/blog"}>
+                {/* <button className="button ms-4">Home</button> */}
+              {/* </Link> */}
+            {/* ) : ( */}
+              {/* <Link onClick={() => setParam("/blog")} to={"/blog"}> */}
                 {/* <Link> */}
                 {/* <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
                   Blog
                 </div> */}
-                <button className="button ms-4">Blog</button>
-              </Link>
-            )}
+                {/* <button className="button ms-4">Blog</button> */}
+              {/* </Link> */}
+            {/* )} */}
           </div>
 
           {/* menu  */}
@@ -189,13 +189,13 @@ const Nav = () => {
                   <LanguagePicker />
                 </li>
                 <li>
-                  <Link onClick={() => setParam("/blog")} to={"/blog"}>
+                {/*  <Link onClick={() => setParam("/blog")} to={"/blog"}>*/}
                     {/* <Link> */}
-                    <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">
-                      Blog
-                    </div>
-                    <button className="button">Blog</button>
-                  </Link>
+                  {/*  <div className="border-2 hover:bg-secondary duration-100 hover:text-white border-secondary p-5 text-lg py-2 rounded-md">*/}
+                  {/*    Blog*/}
+                   {/* </div>*/}
+                   {/* <button className="button">Blog</button>*/}
+                  {/*</Link> */}
                 </li>
               </ul>
             </div>
