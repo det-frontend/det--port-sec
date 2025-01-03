@@ -36,7 +36,7 @@ const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
   const { t, i18n } = useTranslation();
   const [render, setRender] = useState(false);
   const { scrollY } = useScroll();
